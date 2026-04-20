@@ -1,4 +1,0 @@
-
-
-SELECT *
-FROM TECHNICALTEST.ANALYTICS.stg_products
