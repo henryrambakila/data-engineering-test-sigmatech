@@ -1,0 +1,1532 @@
+[0m14:21:01.328401 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000003178EAC400>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000000317D00D160>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000000317D00D6A0>]}
+
+
+============================== 14:21:01.344029 | 7ba8cd4c-5f55-44b3-9f7b-33ca235894ab ==============================
+[0m14:21:01.344029 [info ] [MainThread]: Running with dbt=1.6.18
+[0m14:21:01.344029 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': 'C:\\Users\\midnight23owl\\.dbt', 'log_path': 'C:\\Users\\midnight23owl\\Documents\\technical_test\\logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt run', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m14:21:02.007555 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '7ba8cd4c-5f55-44b3-9f7b-33ca235894ab', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000000317D00D250>]}
+[0m14:21:02.038804 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '7ba8cd4c-5f55-44b3-9f7b-33ca235894ab', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000000317DF672B0>]}
+[0m14:21:02.038804 [info ] [MainThread]: Registered adapter: snowflake=1.6.0
+[0m14:21:02.054434 [debug] [MainThread]: checksum: 7b9fab86a08e9e96a48a825af743c566d95b877e068b8c6d0dbafbf714447189, vars: {}, profile: , target: , version: 1.6.18
+[0m14:21:02.054434 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m14:21:02.054434 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '7ba8cd4c-5f55-44b3-9f7b-33ca235894ab', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000000317DF7B370>]}
+[0m14:21:03.345826 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.technical_test.example
+[0m14:21:03.355832 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '7ba8cd4c-5f55-44b3-9f7b-33ca235894ab', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000000317E9850D0>]}
+[0m14:21:03.376554 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '7ba8cd4c-5f55-44b3-9f7b-33ca235894ab', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000000317E920670>]}
+[0m14:21:03.376554 [info ] [MainThread]: Found 6 models, 0 sources, 0 exposures, 0 metrics, 375 macros, 0 groups, 0 semantic models
+[0m14:21:03.376554 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7ba8cd4c-5f55-44b3-9f7b-33ca235894ab', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000000317E920070>]}
+[0m14:21:03.376554 [info ] [MainThread]: 
+[0m14:21:03.392175 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m14:21:03.392175 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_TECHNICALTEST'
+[0m14:21:03.407823 [debug] [ThreadPool]: Using snowflake connection "list_TECHNICALTEST"
+[0m14:21:03.407823 [debug] [ThreadPool]: On list_TECHNICALTEST: /* {"app": "dbt", "dbt_version": "1.6.18", "profile_name": "technical_test", "target_name": "dev", "connection_name": "list_TECHNICALTEST"} */
+show terse schemas in database TECHNICALTEST
+    limit 10000
+[0m14:21:03.407823 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:21:07.277901 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 4.0 seconds
+[0m14:21:07.290910 [debug] [ThreadPool]: On list_TECHNICALTEST: Close
+[0m14:21:07.360683 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_TECHNICALTEST_ANALYTICS'
+[0m14:21:07.393081 [debug] [ThreadPool]: Using snowflake connection "list_TECHNICALTEST_ANALYTICS"
+[0m14:21:07.395083 [debug] [ThreadPool]: On list_TECHNICALTEST_ANALYTICS: /* {"app": "dbt", "dbt_version": "1.6.18", "profile_name": "technical_test", "target_name": "dev", "connection_name": "list_TECHNICALTEST_ANALYTICS"} */
+show terse objects in TECHNICALTEST.ANALYTICS limit 10000
+[0m14:21:07.396084 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:21:10.469074 [debug] [ThreadPool]: SQL status: SUCCESS 4 in 3.0 seconds
+[0m14:21:10.469074 [debug] [ThreadPool]: On list_TECHNICALTEST_ANALYTICS: Close
+[0m14:21:10.549433 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7ba8cd4c-5f55-44b3-9f7b-33ca235894ab', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000000317E8F4B50>]}
+[0m14:21:10.552437 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m14:21:10.554435 [info ] [MainThread]: 
+[0m14:21:10.560458 [debug] [Thread-1  ]: Began running node model.technical_test.stg_customers
+[0m14:21:10.562460 [info ] [Thread-1  ]: 1 of 6 START sql view model ANALYTICS.stg_customers ............................ [RUN]
+[0m14:21:10.565443 [debug] [Thread-1  ]: Acquiring new snowflake connection 'model.technical_test.stg_customers'
+[0m14:21:10.567464 [debug] [Thread-1  ]: Began compiling node model.technical_test.stg_customers
+[0m14:21:10.590448 [debug] [Thread-1  ]: Writing injected SQL for node "model.technical_test.stg_customers"
+[0m14:21:10.592798 [debug] [Thread-1  ]: Timing info for model.technical_test.stg_customers (compile): 14:21:10.569446 => 14:21:10.592798
+[0m14:21:10.592798 [debug] [Thread-1  ]: Began executing node model.technical_test.stg_customers
+[0m14:21:10.633090 [debug] [Thread-1  ]: Writing runtime sql for node "model.technical_test.stg_customers"
+[0m14:21:10.648720 [debug] [Thread-1  ]: Using snowflake connection "model.technical_test.stg_customers"
+[0m14:21:10.648720 [debug] [Thread-1  ]: On model.technical_test.stg_customers: /* {"app": "dbt", "dbt_version": "1.6.18", "profile_name": "technical_test", "target_name": "dev", "node_id": "model.technical_test.stg_customers"} */
+create or replace   view TECHNICALTEST.ANALYTICS.stg_customers
+  
+   as (
+    
+
+SELECT
+    CUSTOMER_ID,
+    CUSTOMER_CITY,
+    CUSTOMER_STATE
+FROM TECHNICALTEST.PUBLIC.RAW_CUSTOMERS
+  );
+[0m14:21:10.648720 [debug] [Thread-1  ]: Opening a new connection, currently in state init
+[0m14:21:13.075654 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 2.0 seconds
+[0m14:21:13.125634 [debug] [Thread-1  ]: Timing info for model.technical_test.stg_customers (execute): 14:21:10.592798 => 14:21:13.125634
+[0m14:21:13.125634 [debug] [Thread-1  ]: On model.technical_test.stg_customers: Close
+[0m14:21:13.203408 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7ba8cd4c-5f55-44b3-9f7b-33ca235894ab', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000000317E8D57C0>]}
+[0m14:21:13.219011 [info ] [Thread-1  ]: 1 of 6 OK created sql view model ANALYTICS.stg_customers ....................... [[32mSUCCESS 1[0m in 2.64s]
+[0m14:21:13.219011 [debug] [Thread-1  ]: Finished running node model.technical_test.stg_customers
+[0m14:21:13.219011 [debug] [Thread-1  ]: Began running node model.technical_test.stg_orders
+[0m14:21:13.219011 [info ] [Thread-1  ]: 2 of 6 START sql view model ANALYTICS.stg_orders ............................... [RUN]
+[0m14:21:13.234639 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.technical_test.stg_customers, now model.technical_test.stg_orders)
+[0m14:21:13.234639 [debug] [Thread-1  ]: Began compiling node model.technical_test.stg_orders
+[0m14:21:13.234639 [debug] [Thread-1  ]: Writing injected SQL for node "model.technical_test.stg_orders"
+[0m14:21:13.234639 [debug] [Thread-1  ]: Timing info for model.technical_test.stg_orders (compile): 14:21:13.234639 => 14:21:13.234639
+[0m14:21:13.234639 [debug] [Thread-1  ]: Began executing node model.technical_test.stg_orders
+[0m14:21:13.258736 [debug] [Thread-1  ]: Writing runtime sql for node "model.technical_test.stg_orders"
+[0m14:21:13.262719 [debug] [Thread-1  ]: Using snowflake connection "model.technical_test.stg_orders"
+[0m14:21:13.263721 [debug] [Thread-1  ]: On model.technical_test.stg_orders: /* {"app": "dbt", "dbt_version": "1.6.18", "profile_name": "technical_test", "target_name": "dev", "node_id": "model.technical_test.stg_orders"} */
+create or replace   view TECHNICALTEST.ANALYTICS.stg_orders
+  
+   as (
+    
+
+SELECT
+    ORDER_ID,
+    CUSTOMER_ID,
+    ORDER_STATUS,
+    ORDER_PURCHASE_TIMESTAMP
+FROM TECHNICALTEST.PUBLIC.RAW_ORDERS
+  );
+[0m14:21:13.265719 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m14:21:15.687359 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 2.0 seconds
+[0m14:21:15.702987 [debug] [Thread-1  ]: Timing info for model.technical_test.stg_orders (execute): 14:21:13.252709 => 14:21:15.702987
+[0m14:21:15.702987 [debug] [Thread-1  ]: On model.technical_test.stg_orders: Close
+[0m14:21:15.781585 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7ba8cd4c-5f55-44b3-9f7b-33ca235894ab', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000003100E0C940>]}
+[0m14:21:15.785615 [info ] [Thread-1  ]: 2 of 6 OK created sql view model ANALYTICS.stg_orders .......................... [[32mSUCCESS 1[0m in 2.55s]
+[0m14:21:15.791593 [debug] [Thread-1  ]: Finished running node model.technical_test.stg_orders
+[0m14:21:15.795622 [debug] [Thread-1  ]: Began running node model.technical_test.stg_products
+[0m14:21:15.796710 [info ] [Thread-1  ]: 3 of 6 START sql view model ANALYTICS.stg_products ............................. [RUN]
+[0m14:21:15.796710 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.technical_test.stg_orders, now model.technical_test.stg_products)
+[0m14:21:15.796710 [debug] [Thread-1  ]: Began compiling node model.technical_test.stg_products
+[0m14:21:15.812339 [debug] [Thread-1  ]: Writing injected SQL for node "model.technical_test.stg_products"
+[0m14:21:15.812339 [debug] [Thread-1  ]: Timing info for model.technical_test.stg_products (compile): 14:21:15.796710 => 14:21:15.812339
+[0m14:21:15.812339 [debug] [Thread-1  ]: Began executing node model.technical_test.stg_products
+[0m14:21:15.829197 [debug] [Thread-1  ]: Writing runtime sql for node "model.technical_test.stg_products"
+[0m14:21:15.833179 [debug] [Thread-1  ]: Using snowflake connection "model.technical_test.stg_products"
+[0m14:21:15.834184 [debug] [Thread-1  ]: On model.technical_test.stg_products: /* {"app": "dbt", "dbt_version": "1.6.18", "profile_name": "technical_test", "target_name": "dev", "node_id": "model.technical_test.stg_products"} */
+create or replace   view TECHNICALTEST.ANALYTICS.stg_products
+  
+   as (
+    
+
+SELECT
+    PRODUCT_ID,
+    PRODUCT_CATEGORY_NAME
+FROM TECHNICALTEST.PUBLIC.RAW_PRODUCTS
+  );
+[0m14:21:15.836180 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m14:21:19.047907 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 3.0 seconds
+[0m14:21:19.059936 [debug] [Thread-1  ]: Timing info for model.technical_test.stg_products (execute): 14:21:15.812339 => 14:21:19.058935
+[0m14:21:19.063919 [debug] [Thread-1  ]: On model.technical_test.stg_products: Close
+[0m14:21:19.124934 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7ba8cd4c-5f55-44b3-9f7b-33ca235894ab', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000000317E8D2E20>]}
+[0m14:21:19.124934 [info ] [Thread-1  ]: 3 of 6 OK created sql view model ANALYTICS.stg_products ........................ [[32mSUCCESS 1[0m in 3.33s]
+[0m14:21:19.124934 [debug] [Thread-1  ]: Finished running node model.technical_test.stg_products
+[0m14:21:19.124934 [debug] [Thread-1  ]: Began running node model.technical_test.dim_customers
+[0m14:21:19.124934 [info ] [Thread-1  ]: 4 of 6 START sql table model ANALYTICS.dim_customers ........................... [RUN]
+[0m14:21:19.140543 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.technical_test.stg_products, now model.technical_test.dim_customers)
+[0m14:21:19.140543 [debug] [Thread-1  ]: Began compiling node model.technical_test.dim_customers
+[0m14:21:19.140543 [debug] [Thread-1  ]: Writing injected SQL for node "model.technical_test.dim_customers"
+[0m14:21:19.156168 [debug] [Thread-1  ]: Timing info for model.technical_test.dim_customers (compile): 14:21:19.140543 => 14:21:19.156168
+[0m14:21:19.156168 [debug] [Thread-1  ]: Began executing node model.technical_test.dim_customers
+[0m14:21:19.187441 [debug] [Thread-1  ]: Writing runtime sql for node "model.technical_test.dim_customers"
+[0m14:21:19.187441 [debug] [Thread-1  ]: Using snowflake connection "model.technical_test.dim_customers"
+[0m14:21:19.187441 [debug] [Thread-1  ]: On model.technical_test.dim_customers: /* {"app": "dbt", "dbt_version": "1.6.18", "profile_name": "technical_test", "target_name": "dev", "node_id": "model.technical_test.dim_customers"} */
+create or replace transient table TECHNICALTEST.ANALYTICS.dim_customers
+         as
+        (
+
+SELECT *
+FROM TECHNICALTEST.ANALYTICS.stg_customers
+        );
+[0m14:21:19.203046 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m14:21:22.859217 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 4.0 seconds
+[0m14:21:22.890471 [debug] [Thread-1  ]: Timing info for model.technical_test.dim_customers (execute): 14:21:19.156168 => 14:21:22.890471
+[0m14:21:22.890471 [debug] [Thread-1  ]: On model.technical_test.dim_customers: Close
+[0m14:21:23.064688 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7ba8cd4c-5f55-44b3-9f7b-33ca235894ab', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000003100E42D90>]}
+[0m14:21:23.080321 [info ] [Thread-1  ]: 4 of 6 OK created sql table model ANALYTICS.dim_customers ...................... [[32mSUCCESS 1[0m in 3.92s]
+[0m14:21:23.080321 [debug] [Thread-1  ]: Finished running node model.technical_test.dim_customers
+[0m14:21:23.080321 [debug] [Thread-1  ]: Began running node model.technical_test.fact_sales
+[0m14:21:23.080321 [info ] [Thread-1  ]: 5 of 6 START sql table model ANALYTICS.fact_sales .............................. [RUN]
+[0m14:21:23.095942 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.technical_test.dim_customers, now model.technical_test.fact_sales)
+[0m14:21:23.095942 [debug] [Thread-1  ]: Began compiling node model.technical_test.fact_sales
+[0m14:21:23.095942 [debug] [Thread-1  ]: Writing injected SQL for node "model.technical_test.fact_sales"
+[0m14:21:23.114702 [debug] [Thread-1  ]: Timing info for model.technical_test.fact_sales (compile): 14:21:23.095942 => 14:21:23.112700
+[0m14:21:23.116703 [debug] [Thread-1  ]: Began executing node model.technical_test.fact_sales
+[0m14:21:23.123728 [debug] [Thread-1  ]: Writing runtime sql for node "model.technical_test.fact_sales"
+[0m14:21:23.124780 [debug] [Thread-1  ]: Using snowflake connection "model.technical_test.fact_sales"
+[0m14:21:23.124780 [debug] [Thread-1  ]: On model.technical_test.fact_sales: /* {"app": "dbt", "dbt_version": "1.6.18", "profile_name": "technical_test", "target_name": "dev", "node_id": "model.technical_test.fact_sales"} */
+create or replace transient table TECHNICALTEST.ANALYTICS.fact_sales
+         as
+        (
+
+SELECT
+    oi.ORDER_ID,
+    oi.ORDER_ITEM_ID,
+    o.CUSTOMER_ID,
+    oi.PRODUCT_ID,
+    DATE(o.ORDER_PURCHASE_TIMESTAMP) AS DATE_KEY,
+    oi.PRICE,
+    oi.FREIGHT_VALUE,
+    (oi.PRICE + oi.FREIGHT_VALUE) AS TOTAL_AMOUNT
+FROM TECHNICALTEST.PUBLIC.RAW_ORDER_ITEMS oi
+JOIN TECHNICALTEST.ANALYTICS.stg_orders o
+    ON oi.ORDER_ID = o.ORDER_ID
+        );
+[0m14:21:23.124780 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m14:21:27.033330 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 4.0 seconds
+[0m14:21:27.041337 [debug] [Thread-1  ]: Timing info for model.technical_test.fact_sales (execute): 14:21:23.118703 => 14:21:27.040360
+[0m14:21:27.043337 [debug] [Thread-1  ]: On model.technical_test.fact_sales: Close
+[0m14:21:27.148269 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7ba8cd4c-5f55-44b3-9f7b-33ca235894ab', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000003100DFE730>]}
+[0m14:21:27.148269 [info ] [Thread-1  ]: 5 of 6 OK created sql table model ANALYTICS.fact_sales ......................... [[32mSUCCESS 1[0m in 4.05s]
+[0m14:21:27.148269 [debug] [Thread-1  ]: Finished running node model.technical_test.fact_sales
+[0m14:21:27.148269 [debug] [Thread-1  ]: Began running node model.technical_test.dim_products
+[0m14:21:27.148269 [info ] [Thread-1  ]: 6 of 6 START sql table model ANALYTICS.dim_products ............................ [RUN]
+[0m14:21:27.148269 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.technical_test.fact_sales, now model.technical_test.dim_products)
+[0m14:21:27.148269 [debug] [Thread-1  ]: Began compiling node model.technical_test.dim_products
+[0m14:21:27.163894 [debug] [Thread-1  ]: Writing injected SQL for node "model.technical_test.dim_products"
+[0m14:21:27.163894 [debug] [Thread-1  ]: Timing info for model.technical_test.dim_products (compile): 14:21:27.148269 => 14:21:27.163894
+[0m14:21:27.163894 [debug] [Thread-1  ]: Began executing node model.technical_test.dim_products
+[0m14:21:27.179521 [debug] [Thread-1  ]: Writing runtime sql for node "model.technical_test.dim_products"
+[0m14:21:27.179521 [debug] [Thread-1  ]: Using snowflake connection "model.technical_test.dim_products"
+[0m14:21:27.179521 [debug] [Thread-1  ]: On model.technical_test.dim_products: /* {"app": "dbt", "dbt_version": "1.6.18", "profile_name": "technical_test", "target_name": "dev", "node_id": "model.technical_test.dim_products"} */
+create or replace transient table TECHNICALTEST.ANALYTICS.dim_products
+         as
+        (
+
+SELECT *
+FROM TECHNICALTEST.ANALYTICS.stg_products
+        );
+[0m14:21:27.179521 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m14:21:31.874834 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 5.0 seconds
+[0m14:21:31.890491 [debug] [Thread-1  ]: Timing info for model.technical_test.dim_products (execute): 14:21:27.163894 => 14:21:31.890491
+[0m14:21:31.906114 [debug] [Thread-1  ]: On model.technical_test.dim_products: Close
+[0m14:21:31.981209 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7ba8cd4c-5f55-44b3-9f7b-33ca235894ab', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000003100E504F0>]}
+[0m14:21:31.985292 [info ] [Thread-1  ]: 6 of 6 OK created sql table model ANALYTICS.dim_products ....................... [[32mSUCCESS 1[0m in 4.83s]
+[0m14:21:31.985292 [debug] [Thread-1  ]: Finished running node model.technical_test.dim_products
+[0m14:21:31.985292 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:21:32.000947 [debug] [MainThread]: Connection 'list_TECHNICALTEST' was properly closed.
+[0m14:21:32.000947 [debug] [MainThread]: Connection 'list_TECHNICALTEST_ANALYTICS' was properly closed.
+[0m14:21:32.000947 [debug] [MainThread]: Connection 'model.technical_test.dim_products' was properly closed.
+[0m14:21:32.000947 [info ] [MainThread]: 
+[0m14:21:32.000947 [info ] [MainThread]: Finished running 3 view models, 3 table models in 0 hours 0 minutes and 28.61 seconds (28.61s).
+[0m14:21:32.000947 [debug] [MainThread]: Command end result
+[0m14:21:32.016548 [info ] [MainThread]: 
+[0m14:21:32.016548 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m14:21:32.032171 [info ] [MainThread]: 
+[0m14:21:32.032171 [info ] [MainThread]: Done. PASS=6 WARN=0 ERROR=0 SKIP=0 TOTAL=6
+[0m14:21:32.032171 [debug] [MainThread]: Command `dbt run` succeeded at 14:21:32.032171 after 30.72 seconds
+[0m14:21:32.032171 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000003178EAC400>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000003100E5EF70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000000317E90DB80>]}
+[0m14:21:32.032171 [debug] [MainThread]: Flushing usage events
+[0m14:25:24.610014 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000003D88100100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000003D8C25D190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000003D8C25D730>]}
+
+
+============================== 14:25:24.610014 | c0c14ab5-1c8e-4fc2-9c84-0e057f66e831 ==============================
+[0m14:25:24.610014 [info ] [MainThread]: Running with dbt=1.6.18
+[0m14:25:24.610014 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\midnight23owl\\.dbt', 'debug': 'False', 'warn_error': 'None', 'log_path': 'C:\\Users\\midnight23owl\\Documents\\technical_test\\logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt test', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m14:25:25.281553 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'c0c14ab5-1c8e-4fc2-9c84-0e057f66e831', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000003D8C25D280>]}
+[0m14:25:25.312280 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'c0c14ab5-1c8e-4fc2-9c84-0e057f66e831', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000003D8D1CA310>]}
+[0m14:25:25.314303 [info ] [MainThread]: Registered adapter: snowflake=1.6.0
+[0m14:25:25.328366 [debug] [MainThread]: checksum: 7b9fab86a08e9e96a48a825af743c566d95b877e068b8c6d0dbafbf714447189, vars: {}, profile: , target: , version: 1.6.18
+[0m14:25:25.453373 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 0 files changed.
+[0m14:25:25.453373 [debug] [MainThread]: Partial parsing: added file: technical_test://models\schema.yml
+[0m14:25:25.562317 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.technical_test.example
+[0m14:25:25.577942 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'c0c14ab5-1c8e-4fc2-9c84-0e057f66e831', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000003D8D43DF40>]}
+[0m14:25:25.593590 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'c0c14ab5-1c8e-4fc2-9c84-0e057f66e831', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000003D8D2FEFA0>]}
+[0m14:25:25.609189 [info ] [MainThread]: Found 6 models, 7 tests, 0 sources, 0 exposures, 0 metrics, 375 macros, 0 groups, 0 semantic models
+[0m14:25:25.609189 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c0c14ab5-1c8e-4fc2-9c84-0e057f66e831', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000003D89396EB0>]}
+[0m14:25:25.609189 [info ] [MainThread]: 
+[0m14:25:25.609189 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m14:25:25.609189 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_TECHNICALTEST_ANALYTICS'
+[0m14:25:25.644946 [debug] [ThreadPool]: Using snowflake connection "list_TECHNICALTEST_ANALYTICS"
+[0m14:25:25.645944 [debug] [ThreadPool]: On list_TECHNICALTEST_ANALYTICS: /* {"app": "dbt", "dbt_version": "1.6.18", "profile_name": "technical_test", "target_name": "dev", "connection_name": "list_TECHNICALTEST_ANALYTICS"} */
+show terse objects in TECHNICALTEST.ANALYTICS limit 10000
+[0m14:25:25.646947 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:25:29.352273 [debug] [ThreadPool]: SQL status: SUCCESS 7 in 4.0 seconds
+[0m14:25:29.361254 [debug] [ThreadPool]: On list_TECHNICALTEST_ANALYTICS: Close
+[0m14:25:29.797222 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c0c14ab5-1c8e-4fc2-9c84-0e057f66e831', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000003D8D3DC700>]}
+[0m14:25:29.797222 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m14:25:29.797222 [info ] [MainThread]: 
+[0m14:25:29.812848 [debug] [Thread-1  ]: Began running node test.technical_test.not_null_dim_customers_customer_id.dd91cd1c8d
+[0m14:25:29.812848 [info ] [Thread-1  ]: 1 of 7 START test not_null_dim_customers_customer_id ........................... [RUN]
+[0m14:25:29.812848 [debug] [Thread-1  ]: Acquiring new snowflake connection 'test.technical_test.not_null_dim_customers_customer_id.dd91cd1c8d'
+[0m14:25:29.812848 [debug] [Thread-1  ]: Began compiling node test.technical_test.not_null_dim_customers_customer_id.dd91cd1c8d
+[0m14:25:29.853687 [debug] [Thread-1  ]: Writing injected SQL for node "test.technical_test.not_null_dim_customers_customer_id.dd91cd1c8d"
+[0m14:25:29.857689 [debug] [Thread-1  ]: Timing info for test.technical_test.not_null_dim_customers_customer_id.dd91cd1c8d (compile): 14:25:29.812848 => 14:25:29.856688
+[0m14:25:29.858692 [debug] [Thread-1  ]: Began executing node test.technical_test.not_null_dim_customers_customer_id.dd91cd1c8d
+[0m14:25:29.880409 [debug] [Thread-1  ]: Writing runtime sql for node "test.technical_test.not_null_dim_customers_customer_id.dd91cd1c8d"
+[0m14:25:29.898130 [debug] [Thread-1  ]: Using snowflake connection "test.technical_test.not_null_dim_customers_customer_id.dd91cd1c8d"
+[0m14:25:29.900132 [debug] [Thread-1  ]: On test.technical_test.not_null_dim_customers_customer_id.dd91cd1c8d: /* {"app": "dbt", "dbt_version": "1.6.18", "profile_name": "technical_test", "target_name": "dev", "node_id": "test.technical_test.not_null_dim_customers_customer_id.dd91cd1c8d"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select customer_id
+from TECHNICALTEST.ANALYTICS.dim_customers
+where customer_id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m14:25:29.901133 [debug] [Thread-1  ]: Opening a new connection, currently in state init
+[0m14:25:33.312863 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 3.0 seconds
+[0m14:25:33.350962 [debug] [Thread-1  ]: Timing info for test.technical_test.not_null_dim_customers_customer_id.dd91cd1c8d (execute): 14:25:29.860693 => 14:25:33.349974
+[0m14:25:33.352947 [debug] [Thread-1  ]: On test.technical_test.not_null_dim_customers_customer_id.dd91cd1c8d: Close
+[0m14:25:33.437880 [info ] [Thread-1  ]: 1 of 7 PASS not_null_dim_customers_customer_id ................................. [[32mPASS[0m in 3.63s]
+[0m14:25:33.453492 [debug] [Thread-1  ]: Finished running node test.technical_test.not_null_dim_customers_customer_id.dd91cd1c8d
+[0m14:25:33.453492 [debug] [Thread-1  ]: Began running node test.technical_test.not_null_dim_products_product_id.c8aba288d1
+[0m14:25:33.453492 [info ] [Thread-1  ]: 2 of 7 START test not_null_dim_products_product_id ............................. [RUN]
+[0m14:25:33.453492 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly test.technical_test.not_null_dim_customers_customer_id.dd91cd1c8d, now test.technical_test.not_null_dim_products_product_id.c8aba288d1)
+[0m14:25:33.469133 [debug] [Thread-1  ]: Began compiling node test.technical_test.not_null_dim_products_product_id.c8aba288d1
+[0m14:25:33.484760 [debug] [Thread-1  ]: Writing injected SQL for node "test.technical_test.not_null_dim_products_product_id.c8aba288d1"
+[0m14:25:33.501497 [debug] [Thread-1  ]: Timing info for test.technical_test.not_null_dim_products_product_id.c8aba288d1 (compile): 14:25:33.469133 => 14:25:33.500494
+[0m14:25:33.503518 [debug] [Thread-1  ]: Began executing node test.technical_test.not_null_dim_products_product_id.c8aba288d1
+[0m14:25:33.512504 [debug] [Thread-1  ]: Writing runtime sql for node "test.technical_test.not_null_dim_products_product_id.c8aba288d1"
+[0m14:25:33.517513 [debug] [Thread-1  ]: Using snowflake connection "test.technical_test.not_null_dim_products_product_id.c8aba288d1"
+[0m14:25:33.519514 [debug] [Thread-1  ]: On test.technical_test.not_null_dim_products_product_id.c8aba288d1: /* {"app": "dbt", "dbt_version": "1.6.18", "profile_name": "technical_test", "target_name": "dev", "node_id": "test.technical_test.not_null_dim_products_product_id.c8aba288d1"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select product_id
+from TECHNICALTEST.ANALYTICS.dim_products
+where product_id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m14:25:33.521511 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m14:25:35.906275 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 2.0 seconds
+[0m14:25:35.906275 [debug] [Thread-1  ]: Timing info for test.technical_test.not_null_dim_products_product_id.c8aba288d1 (execute): 14:25:33.505505 => 14:25:35.906275
+[0m14:25:35.906275 [debug] [Thread-1  ]: On test.technical_test.not_null_dim_products_product_id.c8aba288d1: Close
+[0m14:25:36.008515 [info ] [Thread-1  ]: 2 of 7 PASS not_null_dim_products_product_id ................................... [[32mPASS[0m in 2.56s]
+[0m14:25:36.012521 [debug] [Thread-1  ]: Finished running node test.technical_test.not_null_dim_products_product_id.c8aba288d1
+[0m14:25:36.013519 [debug] [Thread-1  ]: Began running node test.technical_test.not_null_fact_sales_customer_id.39febb61fd
+[0m14:25:36.015520 [info ] [Thread-1  ]: 3 of 7 START test not_null_fact_sales_customer_id .............................. [RUN]
+[0m14:25:36.016585 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly test.technical_test.not_null_dim_products_product_id.c8aba288d1, now test.technical_test.not_null_fact_sales_customer_id.39febb61fd)
+[0m14:25:36.016585 [debug] [Thread-1  ]: Began compiling node test.technical_test.not_null_fact_sales_customer_id.39febb61fd
+[0m14:25:36.016585 [debug] [Thread-1  ]: Writing injected SQL for node "test.technical_test.not_null_fact_sales_customer_id.39febb61fd"
+[0m14:25:36.035459 [debug] [Thread-1  ]: Timing info for test.technical_test.not_null_fact_sales_customer_id.39febb61fd (compile): 14:25:36.016585 => 14:25:36.034457
+[0m14:25:36.037461 [debug] [Thread-1  ]: Began executing node test.technical_test.not_null_fact_sales_customer_id.39febb61fd
+[0m14:25:36.045483 [debug] [Thread-1  ]: Writing runtime sql for node "test.technical_test.not_null_fact_sales_customer_id.39febb61fd"
+[0m14:25:36.050487 [debug] [Thread-1  ]: Using snowflake connection "test.technical_test.not_null_fact_sales_customer_id.39febb61fd"
+[0m14:25:36.052473 [debug] [Thread-1  ]: On test.technical_test.not_null_fact_sales_customer_id.39febb61fd: /* {"app": "dbt", "dbt_version": "1.6.18", "profile_name": "technical_test", "target_name": "dev", "node_id": "test.technical_test.not_null_fact_sales_customer_id.39febb61fd"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select customer_id
+from TECHNICALTEST.ANALYTICS.fact_sales
+where customer_id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m14:25:36.053471 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m14:25:38.452938 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 2.0 seconds
+[0m14:25:38.468564 [debug] [Thread-1  ]: Timing info for test.technical_test.not_null_fact_sales_customer_id.39febb61fd (execute): 14:25:36.039461 => 14:25:38.468564
+[0m14:25:38.468564 [debug] [Thread-1  ]: On test.technical_test.not_null_fact_sales_customer_id.39febb61fd: Close
+[0m14:25:38.540199 [info ] [Thread-1  ]: 3 of 7 PASS not_null_fact_sales_customer_id .................................... [[32mPASS[0m in 2.52s]
+[0m14:25:38.543205 [debug] [Thread-1  ]: Finished running node test.technical_test.not_null_fact_sales_customer_id.39febb61fd
+[0m14:25:38.545206 [debug] [Thread-1  ]: Began running node test.technical_test.not_null_fact_sales_order_id.f6f073d70b
+[0m14:25:38.547208 [info ] [Thread-1  ]: 4 of 7 START test not_null_fact_sales_order_id ................................. [RUN]
+[0m14:25:38.550207 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly test.technical_test.not_null_fact_sales_customer_id.39febb61fd, now test.technical_test.not_null_fact_sales_order_id.f6f073d70b)
+[0m14:25:38.552226 [debug] [Thread-1  ]: Began compiling node test.technical_test.not_null_fact_sales_order_id.f6f073d70b
+[0m14:25:38.562215 [debug] [Thread-1  ]: Writing injected SQL for node "test.technical_test.not_null_fact_sales_order_id.f6f073d70b"
+[0m14:25:38.566219 [debug] [Thread-1  ]: Timing info for test.technical_test.not_null_fact_sales_order_id.f6f073d70b (compile): 14:25:38.553211 => 14:25:38.565220
+[0m14:25:38.567223 [debug] [Thread-1  ]: Began executing node test.technical_test.not_null_fact_sales_order_id.f6f073d70b
+[0m14:25:38.575224 [debug] [Thread-1  ]: Writing runtime sql for node "test.technical_test.not_null_fact_sales_order_id.f6f073d70b"
+[0m14:25:38.578342 [debug] [Thread-1  ]: Using snowflake connection "test.technical_test.not_null_fact_sales_order_id.f6f073d70b"
+[0m14:25:38.578342 [debug] [Thread-1  ]: On test.technical_test.not_null_fact_sales_order_id.f6f073d70b: /* {"app": "dbt", "dbt_version": "1.6.18", "profile_name": "technical_test", "target_name": "dev", "node_id": "test.technical_test.not_null_fact_sales_order_id.f6f073d70b"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select order_id
+from TECHNICALTEST.ANALYTICS.fact_sales
+where order_id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m14:25:38.578342 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m14:25:41.024871 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 2.0 seconds
+[0m14:25:41.032877 [debug] [Thread-1  ]: Timing info for test.technical_test.not_null_fact_sales_order_id.f6f073d70b (execute): 14:25:38.569224 => 14:25:41.031877
+[0m14:25:41.034878 [debug] [Thread-1  ]: On test.technical_test.not_null_fact_sales_order_id.f6f073d70b: Close
+[0m14:25:41.101926 [info ] [Thread-1  ]: 4 of 7 PASS not_null_fact_sales_order_id ....................................... [[32mPASS[0m in 2.55s]
+[0m14:25:41.104929 [debug] [Thread-1  ]: Finished running node test.technical_test.not_null_fact_sales_order_id.f6f073d70b
+[0m14:25:41.106930 [debug] [Thread-1  ]: Began running node test.technical_test.not_null_fact_sales_product_id.39101802a8
+[0m14:25:41.108933 [info ] [Thread-1  ]: 5 of 7 START test not_null_fact_sales_product_id ............................... [RUN]
+[0m14:25:41.111933 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly test.technical_test.not_null_fact_sales_order_id.f6f073d70b, now test.technical_test.not_null_fact_sales_product_id.39101802a8)
+[0m14:25:41.113020 [debug] [Thread-1  ]: Began compiling node test.technical_test.not_null_fact_sales_product_id.39101802a8
+[0m14:25:41.113020 [debug] [Thread-1  ]: Writing injected SQL for node "test.technical_test.not_null_fact_sales_product_id.39101802a8"
+[0m14:25:41.128852 [debug] [Thread-1  ]: Timing info for test.technical_test.not_null_fact_sales_product_id.39101802a8 (compile): 14:25:41.113020 => 14:25:41.128648
+[0m14:25:41.130856 [debug] [Thread-1  ]: Began executing node test.technical_test.not_null_fact_sales_product_id.39101802a8
+[0m14:25:41.140923 [debug] [Thread-1  ]: Writing runtime sql for node "test.technical_test.not_null_fact_sales_product_id.39101802a8"
+[0m14:25:41.140923 [debug] [Thread-1  ]: Using snowflake connection "test.technical_test.not_null_fact_sales_product_id.39101802a8"
+[0m14:25:41.140923 [debug] [Thread-1  ]: On test.technical_test.not_null_fact_sales_product_id.39101802a8: /* {"app": "dbt", "dbt_version": "1.6.18", "profile_name": "technical_test", "target_name": "dev", "node_id": "test.technical_test.not_null_fact_sales_product_id.39101802a8"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select product_id
+from TECHNICALTEST.ANALYTICS.fact_sales
+where product_id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m14:25:41.140923 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m14:25:43.837295 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 3.0 seconds
+[0m14:25:43.848298 [debug] [Thread-1  ]: Timing info for test.technical_test.not_null_fact_sales_product_id.39101802a8 (execute): 14:25:41.132857 => 14:25:43.846296
+[0m14:25:43.850326 [debug] [Thread-1  ]: On test.technical_test.not_null_fact_sales_product_id.39101802a8: Close
+[0m14:25:43.890494 [info ] [Thread-1  ]: 5 of 7 PASS not_null_fact_sales_product_id ..................................... [[32mPASS[0m in 2.78s]
+[0m14:25:43.906122 [debug] [Thread-1  ]: Finished running node test.technical_test.not_null_fact_sales_product_id.39101802a8
+[0m14:25:43.906122 [debug] [Thread-1  ]: Began running node test.technical_test.unique_dim_customers_customer_id.15c9f1e2fd
+[0m14:25:43.906122 [info ] [Thread-1  ]: 6 of 7 START test unique_dim_customers_customer_id ............................. [RUN]
+[0m14:25:43.906122 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly test.technical_test.not_null_fact_sales_product_id.39101802a8, now test.technical_test.unique_dim_customers_customer_id.15c9f1e2fd)
+[0m14:25:43.906122 [debug] [Thread-1  ]: Began compiling node test.technical_test.unique_dim_customers_customer_id.15c9f1e2fd
+[0m14:25:43.921747 [debug] [Thread-1  ]: Writing injected SQL for node "test.technical_test.unique_dim_customers_customer_id.15c9f1e2fd"
+[0m14:25:43.921747 [debug] [Thread-1  ]: Timing info for test.technical_test.unique_dim_customers_customer_id.15c9f1e2fd (compile): 14:25:43.906122 => 14:25:43.921747
+[0m14:25:43.921747 [debug] [Thread-1  ]: Began executing node test.technical_test.unique_dim_customers_customer_id.15c9f1e2fd
+[0m14:25:43.937372 [debug] [Thread-1  ]: Writing runtime sql for node "test.technical_test.unique_dim_customers_customer_id.15c9f1e2fd"
+[0m14:25:43.937372 [debug] [Thread-1  ]: Using snowflake connection "test.technical_test.unique_dim_customers_customer_id.15c9f1e2fd"
+[0m14:25:43.937372 [debug] [Thread-1  ]: On test.technical_test.unique_dim_customers_customer_id.15c9f1e2fd: /* {"app": "dbt", "dbt_version": "1.6.18", "profile_name": "technical_test", "target_name": "dev", "node_id": "test.technical_test.unique_dim_customers_customer_id.15c9f1e2fd"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    customer_id as unique_field,
+    count(*) as n_records
+
+from TECHNICALTEST.ANALYTICS.dim_customers
+where customer_id is not null
+group by customer_id
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m14:25:43.937372 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m14:25:46.469350 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 3.0 seconds
+[0m14:25:46.469350 [debug] [Thread-1  ]: Timing info for test.technical_test.unique_dim_customers_customer_id.15c9f1e2fd (execute): 14:25:43.921747 => 14:25:46.469350
+[0m14:25:46.469350 [debug] [Thread-1  ]: On test.technical_test.unique_dim_customers_customer_id.15c9f1e2fd: Close
+[0m14:25:46.547461 [info ] [Thread-1  ]: 6 of 7 PASS unique_dim_customers_customer_id ................................... [[32mPASS[0m in 2.64s]
+[0m14:25:46.563061 [debug] [Thread-1  ]: Finished running node test.technical_test.unique_dim_customers_customer_id.15c9f1e2fd
+[0m14:25:46.563061 [debug] [Thread-1  ]: Began running node test.technical_test.unique_dim_products_product_id.ef7b2a9985
+[0m14:25:46.563061 [info ] [Thread-1  ]: 7 of 7 START test unique_dim_products_product_id ............................... [RUN]
+[0m14:25:46.563061 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly test.technical_test.unique_dim_customers_customer_id.15c9f1e2fd, now test.technical_test.unique_dim_products_product_id.ef7b2a9985)
+[0m14:25:46.578693 [debug] [Thread-1  ]: Began compiling node test.technical_test.unique_dim_products_product_id.ef7b2a9985
+[0m14:25:46.598560 [debug] [Thread-1  ]: Writing injected SQL for node "test.technical_test.unique_dim_products_product_id.ef7b2a9985"
+[0m14:25:46.602547 [debug] [Thread-1  ]: Timing info for test.technical_test.unique_dim_products_product_id.ef7b2a9985 (compile): 14:25:46.578693 => 14:25:46.601543
+[0m14:25:46.604545 [debug] [Thread-1  ]: Began executing node test.technical_test.unique_dim_products_product_id.ef7b2a9985
+[0m14:25:46.612549 [debug] [Thread-1  ]: Writing runtime sql for node "test.technical_test.unique_dim_products_product_id.ef7b2a9985"
+[0m14:25:46.615554 [debug] [Thread-1  ]: Using snowflake connection "test.technical_test.unique_dim_products_product_id.ef7b2a9985"
+[0m14:25:46.617553 [debug] [Thread-1  ]: On test.technical_test.unique_dim_products_product_id.ef7b2a9985: /* {"app": "dbt", "dbt_version": "1.6.18", "profile_name": "technical_test", "target_name": "dev", "node_id": "test.technical_test.unique_dim_products_product_id.ef7b2a9985"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    product_id as unique_field,
+    count(*) as n_records
+
+from TECHNICALTEST.ANALYTICS.dim_products
+where product_id is not null
+group by product_id
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m14:25:46.618558 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m14:25:49.061690 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 2.0 seconds
+[0m14:25:49.064825 [debug] [Thread-1  ]: Timing info for test.technical_test.unique_dim_products_product_id.ef7b2a9985 (execute): 14:25:46.606567 => 14:25:49.064825
+[0m14:25:49.064825 [debug] [Thread-1  ]: On test.technical_test.unique_dim_products_product_id.ef7b2a9985: Close
+[0m14:25:49.138951 [info ] [Thread-1  ]: 7 of 7 PASS unique_dim_products_product_id ..................................... [[32mPASS[0m in 2.57s]
+[0m14:25:49.141064 [debug] [Thread-1  ]: Finished running node test.technical_test.unique_dim_products_product_id.ef7b2a9985
+[0m14:25:49.141064 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:25:49.141064 [debug] [MainThread]: Connection 'list_TECHNICALTEST_ANALYTICS' was properly closed.
+[0m14:25:49.156698 [debug] [MainThread]: Connection 'test.technical_test.unique_dim_products_product_id.ef7b2a9985' was properly closed.
+[0m14:25:49.156698 [info ] [MainThread]: 
+[0m14:25:49.156698 [info ] [MainThread]: Finished running 7 tests in 0 hours 0 minutes and 23.55 seconds (23.55s).
+[0m14:25:49.172325 [debug] [MainThread]: Command end result
+[0m14:25:49.250366 [info ] [MainThread]: 
+[0m14:25:49.250366 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m14:25:49.250366 [info ] [MainThread]: 
+[0m14:25:49.250366 [info ] [MainThread]: Done. PASS=7 WARN=0 ERROR=0 SKIP=0 TOTAL=7
+[0m14:25:49.250366 [debug] [MainThread]: Command `dbt test` succeeded at 14:25:49.250366 after 24.67 seconds
+[0m14:25:49.250366 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000003D88100100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000003D8BD16C40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000003D893B5CD0>]}
+[0m14:25:49.250366 [debug] [MainThread]: Flushing usage events
+[0m14:40:03.038970 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000004B874DC370>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000004B8B62D160>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000004B8B62D730>]}
+
+
+============================== 14:40:03.045977 | c3f5a528-e66a-4b6f-b8b1-130e03f05e2f ==============================
+[0m14:40:03.045977 [info ] [MainThread]: Running with dbt=1.6.18
+[0m14:40:03.047979 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\midnight23owl\\.dbt', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'C:\\Users\\midnight23owl\\Documents\\technical_test\\logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'invocation_command': 'dbt test', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m14:40:03.726460 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'c3f5a528-e66a-4b6f-b8b1-130e03f05e2f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000004B8B62D250>]}
+[0m14:40:03.752476 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'c3f5a528-e66a-4b6f-b8b1-130e03f05e2f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000004B8C59A2E0>]}
+[0m14:40:03.754495 [info ] [MainThread]: Registered adapter: snowflake=1.6.0
+[0m14:40:03.772515 [debug] [MainThread]: checksum: 7b9fab86a08e9e96a48a825af743c566d95b877e068b8c6d0dbafbf714447189, vars: {}, profile: , target: , version: 1.6.18
+[0m14:40:03.850547 [error] [MainThread]: Encountered an error:
+Parsing Error
+  Error reading technical_test: schema.yml - Runtime Error
+    Syntax error near line 4
+    ------------------------------
+    1  | version: 2
+    2  | 
+    3  | models:
+    4  | 	- name: dim_customers
+    5  | 	description: "Customer dimension table"
+    6  | 	columns:
+    7  | 	  - name: customer_id
+    
+    Raw Error:
+    ------------------------------
+    while scanning for the next token
+    found character that cannot start any token
+      in "<unicode string>", line 4, column 1
+[0m14:40:03.853566 [debug] [MainThread]: Command `dbt test` failed at 14:40:03.852549 after 0.84 seconds
+[0m14:40:03.854551 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000004B874DC370>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000004B8C6E5F10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000004B8C6E5DC0>]}
+[0m14:40:03.855568 [debug] [MainThread]: Flushing usage events
+[0m14:43:44.984292 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000000E9F0A6C370>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000000E9F4BBD160>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000000E9F4BBD730>]}
+
+
+============================== 14:43:44.997322 | 69806628-987a-43cc-be85-c705c7c2614a ==============================
+[0m14:43:44.997322 [info ] [MainThread]: Running with dbt=1.6.18
+[0m14:43:45.000324 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': 'C:\\Users\\midnight23owl\\Documents\\technical_test\\logs', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\midnight23owl\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt test', 'send_anonymous_usage_stats': 'True'}
+[0m14:43:45.734289 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '69806628-987a-43cc-be85-c705c7c2614a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000000E9F4BBD250>]}
+[0m14:43:45.765539 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '69806628-987a-43cc-be85-c705c7c2614a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000000E9F5B152E0>]}
+[0m14:43:45.765539 [info ] [MainThread]: Registered adapter: snowflake=1.6.0
+[0m14:43:45.781145 [debug] [MainThread]: checksum: 7b9fab86a08e9e96a48a825af743c566d95b877e068b8c6d0dbafbf714447189, vars: {}, profile: , target: , version: 1.6.18
+[0m14:43:45.853332 [error] [MainThread]: Encountered an error:
+Parsing Error
+  Error reading technical_test: schema.yml - Runtime Error
+    Syntax error near line 4
+    ------------------------------
+    1  | version: 2
+    2  | 
+    3  | models:
+    4  | 	- name: dim_customers
+    5  | 	description: "Customer dimension table"
+    6  | 	columns:
+    7  | 		- name: customer_id
+    
+    Raw Error:
+    ------------------------------
+    while scanning for the next token
+    found character that cannot start any token
+      in "<unicode string>", line 4, column 1
+[0m14:43:45.855351 [debug] [MainThread]: Command `dbt test` failed at 14:43:45.855351 after 0.90 seconds
+[0m14:43:45.856357 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000000E9F0A6C370>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000000E9F5C75EB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000000E9F5C75A30>]}
+[0m14:43:45.858352 [debug] [MainThread]: Flushing usage events
+[0m14:47:07.632576 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000072429BC400>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000007246B0D130>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000007246B0D730>]}
+
+
+============================== 14:47:07.640651 | c1d1fc33-34c3-42dd-b98e-e6ce539b621a ==============================
+[0m14:47:07.640651 [info ] [MainThread]: Running with dbt=1.6.18
+[0m14:47:07.640651 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\midnight23owl\\.dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': 'C:\\Users\\midnight23owl\\Documents\\technical_test\\logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt test', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m14:47:08.312359 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'c1d1fc33-34c3-42dd-b98e-e6ce539b621a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000007246B0D220>]}
+[0m14:47:08.348173 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'c1d1fc33-34c3-42dd-b98e-e6ce539b621a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000007247A752B0>]}
+[0m14:47:08.350192 [info ] [MainThread]: Registered adapter: snowflake=1.6.0
+[0m14:47:08.361374 [debug] [MainThread]: checksum: 7b9fab86a08e9e96a48a825af743c566d95b877e068b8c6d0dbafbf714447189, vars: {}, profile: , target: , version: 1.6.18
+[0m14:47:08.484750 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m14:47:08.484750 [debug] [MainThread]: Partial parsing: updated file: technical_test://models\schema.yml
+[0m14:47:08.583325 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'dim_date' in the 'models' section of file 'models\schema.yml'
+[0m14:47:08.702890 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.technical_test.not_null_dim_date_date_key.881d0a31b6' (models\schema.yml) depends on a node named 'dim_date' in package '' which was not found
+[0m14:47:08.702890 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.technical_test.unique_dim_date_date_key.0869fd48f9' (models\schema.yml) depends on a node named 'dim_date' in package '' which was not found
+[0m14:47:08.718515 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.technical_test.example
+[0m14:47:08.734140 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'c1d1fc33-34c3-42dd-b98e-e6ce539b621a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000072484CA100>]}
+[0m14:47:08.749765 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'c1d1fc33-34c3-42dd-b98e-e6ce539b621a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000007247B46CD0>]}
+[0m14:47:08.749765 [info ] [MainThread]: Found 6 models, 11 tests, 0 sources, 0 exposures, 0 metrics, 375 macros, 0 groups, 0 semantic models
+[0m14:47:08.749765 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c1d1fc33-34c3-42dd-b98e-e6ce539b621a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000072465C6D60>]}
+[0m14:47:08.765389 [info ] [MainThread]: 
+[0m14:47:08.765389 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m14:47:08.765389 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_TECHNICALTEST_ANALYTICS'
+[0m14:47:08.781014 [debug] [ThreadPool]: Using snowflake connection "list_TECHNICALTEST_ANALYTICS"
+[0m14:47:08.781014 [debug] [ThreadPool]: On list_TECHNICALTEST_ANALYTICS: /* {"app": "dbt", "dbt_version": "1.6.18", "profile_name": "technical_test", "target_name": "dev", "connection_name": "list_TECHNICALTEST_ANALYTICS"} */
+show terse objects in TECHNICALTEST.ANALYTICS limit 10000
+[0m14:47:08.796639 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:47:12.687407 [debug] [ThreadPool]: SQL status: SUCCESS 7 in 4.0 seconds
+[0m14:47:12.703007 [debug] [ThreadPool]: On list_TECHNICALTEST_ANALYTICS: Close
+[0m14:47:12.765533 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c1d1fc33-34c3-42dd-b98e-e6ce539b621a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000007247B46B50>]}
+[0m14:47:12.765533 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m14:47:12.781150 [info ] [MainThread]: 
+[0m14:47:12.781150 [debug] [Thread-1  ]: Began running node test.technical_test.accepted_values_stg_orders_order_status__delivered__shipped__canceled__processing__invoiced.6684fda73e
+[0m14:47:12.781150 [info ] [Thread-1  ]: 1 of 11 START test accepted_values_stg_orders_order_status__delivered__shipped__canceled__processing__invoiced  [RUN]
+[0m14:47:12.781150 [debug] [Thread-1  ]: Acquiring new snowflake connection 'test.technical_test.accepted_values_stg_orders_order_status__delivered__shipped__canceled__processing__invoiced.6684fda73e'
+[0m14:47:12.781150 [debug] [Thread-1  ]: Began compiling node test.technical_test.accepted_values_stg_orders_order_status__delivered__shipped__canceled__processing__invoiced.6684fda73e
+[0m14:47:12.812402 [debug] [Thread-1  ]: Writing injected SQL for node "test.technical_test.accepted_values_stg_orders_order_status__delivered__shipped__canceled__processing__invoiced.6684fda73e"
+[0m14:47:12.812402 [debug] [Thread-1  ]: Timing info for test.technical_test.accepted_values_stg_orders_order_status__delivered__shipped__canceled__processing__invoiced.6684fda73e (compile): 14:47:12.781150 => 14:47:12.812402
+[0m14:47:12.812402 [debug] [Thread-1  ]: Began executing node test.technical_test.accepted_values_stg_orders_order_status__delivered__shipped__canceled__processing__invoiced.6684fda73e
+[0m14:47:12.859255 [debug] [Thread-1  ]: Writing runtime sql for node "test.technical_test.accepted_values_stg_orders_order_status__delivered__shipped__canceled__processing__invoiced.6684fda73e"
+[0m14:47:12.863262 [debug] [Thread-1  ]: Using snowflake connection "test.technical_test.accepted_values_stg_orders_order_status__delivered__shipped__canceled__processing__invoiced.6684fda73e"
+[0m14:47:12.864260 [debug] [Thread-1  ]: On test.technical_test.accepted_values_stg_orders_order_status__delivered__shipped__canceled__processing__invoiced.6684fda73e: /* {"app": "dbt", "dbt_version": "1.6.18", "profile_name": "technical_test", "target_name": "dev", "node_id": "test.technical_test.accepted_values_stg_orders_order_status__delivered__shipped__canceled__processing__invoiced.6684fda73e"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with all_values as (
+
+    select
+        order_status as value_field,
+        count(*) as n_records
+
+    from TECHNICALTEST.ANALYTICS.stg_orders
+    group by order_status
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'delivered','shipped','canceled','processing','invoiced'
+)
+
+
+
+      
+    ) dbt_internal_test
+[0m14:47:12.865261 [debug] [Thread-1  ]: Opening a new connection, currently in state init
+[0m14:47:15.765770 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 3.0 seconds
+[0m14:47:15.797047 [debug] [Thread-1  ]: Timing info for test.technical_test.accepted_values_stg_orders_order_status__delivered__shipped__canceled__processing__invoiced.6684fda73e (execute): 14:47:12.812402 => 14:47:15.797047
+[0m14:47:15.797047 [debug] [Thread-1  ]: On test.technical_test.accepted_values_stg_orders_order_status__delivered__shipped__canceled__processing__invoiced.6684fda73e: Close
+[0m14:47:15.880265 [error] [Thread-1  ]: 1 of 11 FAIL 3 accepted_values_stg_orders_order_status__delivered__shipped__canceled__processing__invoiced  [[31mFAIL 3[0m in 3.10s]
+[0m14:47:15.880265 [debug] [Thread-1  ]: Finished running node test.technical_test.accepted_values_stg_orders_order_status__delivered__shipped__canceled__processing__invoiced.6684fda73e
+[0m14:47:15.880265 [debug] [Thread-1  ]: Began running node test.technical_test.not_null_dim_customers_customer_id.dd91cd1c8d
+[0m14:47:15.880265 [info ] [Thread-1  ]: 2 of 11 START test not_null_dim_customers_customer_id .......................... [RUN]
+[0m14:47:15.895916 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly test.technical_test.accepted_values_stg_orders_order_status__delivered__shipped__canceled__processing__invoiced.6684fda73e, now test.technical_test.not_null_dim_customers_customer_id.dd91cd1c8d)
+[0m14:47:15.895916 [debug] [Thread-1  ]: Began compiling node test.technical_test.not_null_dim_customers_customer_id.dd91cd1c8d
+[0m14:47:15.911520 [debug] [Thread-1  ]: Writing injected SQL for node "test.technical_test.not_null_dim_customers_customer_id.dd91cd1c8d"
+[0m14:47:15.911520 [debug] [Thread-1  ]: Timing info for test.technical_test.not_null_dim_customers_customer_id.dd91cd1c8d (compile): 14:47:15.895916 => 14:47:15.911520
+[0m14:47:15.911520 [debug] [Thread-1  ]: Began executing node test.technical_test.not_null_dim_customers_customer_id.dd91cd1c8d
+[0m14:47:15.931358 [debug] [Thread-1  ]: Writing runtime sql for node "test.technical_test.not_null_dim_customers_customer_id.dd91cd1c8d"
+[0m14:47:15.934358 [debug] [Thread-1  ]: Using snowflake connection "test.technical_test.not_null_dim_customers_customer_id.dd91cd1c8d"
+[0m14:47:15.935359 [debug] [Thread-1  ]: On test.technical_test.not_null_dim_customers_customer_id.dd91cd1c8d: /* {"app": "dbt", "dbt_version": "1.6.18", "profile_name": "technical_test", "target_name": "dev", "node_id": "test.technical_test.not_null_dim_customers_customer_id.dd91cd1c8d"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select customer_id
+from TECHNICALTEST.ANALYTICS.dim_customers
+where customer_id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m14:47:15.937364 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m14:47:18.249997 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 2.0 seconds
+[0m14:47:18.249997 [debug] [Thread-1  ]: Timing info for test.technical_test.not_null_dim_customers_customer_id.dd91cd1c8d (execute): 14:47:15.911520 => 14:47:18.249997
+[0m14:47:18.249997 [debug] [Thread-1  ]: On test.technical_test.not_null_dim_customers_customer_id.dd91cd1c8d: Close
+[0m14:47:18.348396 [info ] [Thread-1  ]: 2 of 11 PASS not_null_dim_customers_customer_id ................................ [[32mPASS[0m in 2.45s]
+[0m14:47:18.354421 [debug] [Thread-1  ]: Finished running node test.technical_test.not_null_dim_customers_customer_id.dd91cd1c8d
+[0m14:47:18.356423 [debug] [Thread-1  ]: Began running node test.technical_test.not_null_dim_products_product_id.c8aba288d1
+[0m14:47:18.358423 [info ] [Thread-1  ]: 3 of 11 START test not_null_dim_products_product_id ............................ [RUN]
+[0m14:47:18.360537 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly test.technical_test.not_null_dim_customers_customer_id.dd91cd1c8d, now test.technical_test.not_null_dim_products_product_id.c8aba288d1)
+[0m14:47:18.360537 [debug] [Thread-1  ]: Began compiling node test.technical_test.not_null_dim_products_product_id.c8aba288d1
+[0m14:47:18.376171 [debug] [Thread-1  ]: Writing injected SQL for node "test.technical_test.not_null_dim_products_product_id.c8aba288d1"
+[0m14:47:18.376171 [debug] [Thread-1  ]: Timing info for test.technical_test.not_null_dim_products_product_id.c8aba288d1 (compile): 14:47:18.360537 => 14:47:18.376171
+[0m14:47:18.376171 [debug] [Thread-1  ]: Began executing node test.technical_test.not_null_dim_products_product_id.c8aba288d1
+[0m14:47:18.391790 [debug] [Thread-1  ]: Writing runtime sql for node "test.technical_test.not_null_dim_products_product_id.c8aba288d1"
+[0m14:47:18.391790 [debug] [Thread-1  ]: Using snowflake connection "test.technical_test.not_null_dim_products_product_id.c8aba288d1"
+[0m14:47:18.407420 [debug] [Thread-1  ]: On test.technical_test.not_null_dim_products_product_id.c8aba288d1: /* {"app": "dbt", "dbt_version": "1.6.18", "profile_name": "technical_test", "target_name": "dev", "node_id": "test.technical_test.not_null_dim_products_product_id.c8aba288d1"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select product_id
+from TECHNICALTEST.ANALYTICS.dim_products
+where product_id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m14:47:18.407420 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m14:47:21.865372 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 3.0 seconds
+[0m14:47:21.881027 [debug] [Thread-1  ]: Timing info for test.technical_test.not_null_dim_products_product_id.c8aba288d1 (execute): 14:47:18.376171 => 14:47:21.881027
+[0m14:47:21.881027 [debug] [Thread-1  ]: On test.technical_test.not_null_dim_products_product_id.c8aba288d1: Close
+[0m14:47:22.277724 [info ] [Thread-1  ]: 3 of 11 PASS not_null_dim_products_product_id .................................. [[32mPASS[0m in 3.92s]
+[0m14:47:22.282146 [debug] [Thread-1  ]: Finished running node test.technical_test.not_null_dim_products_product_id.c8aba288d1
+[0m14:47:22.282146 [debug] [Thread-1  ]: Began running node test.technical_test.not_null_fact_sales_customer_id.39febb61fd
+[0m14:47:22.282146 [info ] [Thread-1  ]: 4 of 11 START test not_null_fact_sales_customer_id ............................. [RUN]
+[0m14:47:22.282146 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly test.technical_test.not_null_dim_products_product_id.c8aba288d1, now test.technical_test.not_null_fact_sales_customer_id.39febb61fd)
+[0m14:47:22.297781 [debug] [Thread-1  ]: Began compiling node test.technical_test.not_null_fact_sales_customer_id.39febb61fd
+[0m14:47:22.313409 [debug] [Thread-1  ]: Writing injected SQL for node "test.technical_test.not_null_fact_sales_customer_id.39febb61fd"
+[0m14:47:22.313409 [debug] [Thread-1  ]: Timing info for test.technical_test.not_null_fact_sales_customer_id.39febb61fd (compile): 14:47:22.297781 => 14:47:22.313409
+[0m14:47:22.313409 [debug] [Thread-1  ]: Began executing node test.technical_test.not_null_fact_sales_customer_id.39febb61fd
+[0m14:47:22.313409 [debug] [Thread-1  ]: Writing runtime sql for node "test.technical_test.not_null_fact_sales_customer_id.39febb61fd"
+[0m14:47:22.329028 [debug] [Thread-1  ]: Using snowflake connection "test.technical_test.not_null_fact_sales_customer_id.39febb61fd"
+[0m14:47:22.329028 [debug] [Thread-1  ]: On test.technical_test.not_null_fact_sales_customer_id.39febb61fd: /* {"app": "dbt", "dbt_version": "1.6.18", "profile_name": "technical_test", "target_name": "dev", "node_id": "test.technical_test.not_null_fact_sales_customer_id.39febb61fd"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select customer_id
+from TECHNICALTEST.ANALYTICS.fact_sales
+where customer_id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m14:47:22.329028 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m14:47:24.641236 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 2.0 seconds
+[0m14:47:24.656862 [debug] [Thread-1  ]: Timing info for test.technical_test.not_null_fact_sales_customer_id.39febb61fd (execute): 14:47:22.313409 => 14:47:24.656862
+[0m14:47:24.656862 [debug] [Thread-1  ]: On test.technical_test.not_null_fact_sales_customer_id.39febb61fd: Close
+[0m14:47:24.719104 [info ] [Thread-1  ]: 4 of 11 PASS not_null_fact_sales_customer_id ................................... [[32mPASS[0m in 2.44s]
+[0m14:47:24.734720 [debug] [Thread-1  ]: Finished running node test.technical_test.not_null_fact_sales_customer_id.39febb61fd
+[0m14:47:24.734720 [debug] [Thread-1  ]: Began running node test.technical_test.not_null_fact_sales_order_id.f6f073d70b
+[0m14:47:24.734720 [info ] [Thread-1  ]: 5 of 11 START test not_null_fact_sales_order_id ................................ [RUN]
+[0m14:47:24.734720 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly test.technical_test.not_null_fact_sales_customer_id.39febb61fd, now test.technical_test.not_null_fact_sales_order_id.f6f073d70b)
+[0m14:47:24.750367 [debug] [Thread-1  ]: Began compiling node test.technical_test.not_null_fact_sales_order_id.f6f073d70b
+[0m14:47:24.750367 [debug] [Thread-1  ]: Writing injected SQL for node "test.technical_test.not_null_fact_sales_order_id.f6f073d70b"
+[0m14:47:24.750367 [debug] [Thread-1  ]: Timing info for test.technical_test.not_null_fact_sales_order_id.f6f073d70b (compile): 14:47:24.750367 => 14:47:24.750367
+[0m14:47:24.765963 [debug] [Thread-1  ]: Began executing node test.technical_test.not_null_fact_sales_order_id.f6f073d70b
+[0m14:47:24.765963 [debug] [Thread-1  ]: Writing runtime sql for node "test.technical_test.not_null_fact_sales_order_id.f6f073d70b"
+[0m14:47:24.765963 [debug] [Thread-1  ]: Using snowflake connection "test.technical_test.not_null_fact_sales_order_id.f6f073d70b"
+[0m14:47:24.765963 [debug] [Thread-1  ]: On test.technical_test.not_null_fact_sales_order_id.f6f073d70b: /* {"app": "dbt", "dbt_version": "1.6.18", "profile_name": "technical_test", "target_name": "dev", "node_id": "test.technical_test.not_null_fact_sales_order_id.f6f073d70b"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select order_id
+from TECHNICALTEST.ANALYTICS.fact_sales
+where order_id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m14:47:24.765963 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m14:47:27.156821 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 2.0 seconds
+[0m14:47:27.156821 [debug] [Thread-1  ]: Timing info for test.technical_test.not_null_fact_sales_order_id.f6f073d70b (execute): 14:47:24.765963 => 14:47:27.156821
+[0m14:47:27.172447 [debug] [Thread-1  ]: On test.technical_test.not_null_fact_sales_order_id.f6f073d70b: Close
+[0m14:47:27.218925 [info ] [Thread-1  ]: 5 of 11 PASS not_null_fact_sales_order_id ...................................... [[32mPASS[0m in 2.48s]
+[0m14:47:27.218925 [debug] [Thread-1  ]: Finished running node test.technical_test.not_null_fact_sales_order_id.f6f073d70b
+[0m14:47:27.218925 [debug] [Thread-1  ]: Began running node test.technical_test.not_null_fact_sales_product_id.39101802a8
+[0m14:47:27.218925 [info ] [Thread-1  ]: 6 of 11 START test not_null_fact_sales_product_id .............................. [RUN]
+[0m14:47:27.234551 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly test.technical_test.not_null_fact_sales_order_id.f6f073d70b, now test.technical_test.not_null_fact_sales_product_id.39101802a8)
+[0m14:47:27.234551 [debug] [Thread-1  ]: Began compiling node test.technical_test.not_null_fact_sales_product_id.39101802a8
+[0m14:47:27.234551 [debug] [Thread-1  ]: Writing injected SQL for node "test.technical_test.not_null_fact_sales_product_id.39101802a8"
+[0m14:47:27.234551 [debug] [Thread-1  ]: Timing info for test.technical_test.not_null_fact_sales_product_id.39101802a8 (compile): 14:47:27.234551 => 14:47:27.234551
+[0m14:47:27.234551 [debug] [Thread-1  ]: Began executing node test.technical_test.not_null_fact_sales_product_id.39101802a8
+[0m14:47:27.250161 [debug] [Thread-1  ]: Writing runtime sql for node "test.technical_test.not_null_fact_sales_product_id.39101802a8"
+[0m14:47:27.250161 [debug] [Thread-1  ]: Using snowflake connection "test.technical_test.not_null_fact_sales_product_id.39101802a8"
+[0m14:47:27.250161 [debug] [Thread-1  ]: On test.technical_test.not_null_fact_sales_product_id.39101802a8: /* {"app": "dbt", "dbt_version": "1.6.18", "profile_name": "technical_test", "target_name": "dev", "node_id": "test.technical_test.not_null_fact_sales_product_id.39101802a8"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select product_id
+from TECHNICALTEST.ANALYTICS.fact_sales
+where product_id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m14:47:27.250161 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m14:47:29.906076 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 3.0 seconds
+[0m14:47:29.921704 [debug] [Thread-1  ]: Timing info for test.technical_test.not_null_fact_sales_product_id.39101802a8 (execute): 14:47:27.250161 => 14:47:29.921704
+[0m14:47:29.921704 [debug] [Thread-1  ]: On test.technical_test.not_null_fact_sales_product_id.39101802a8: Close
+[0m14:47:29.984191 [info ] [Thread-1  ]: 6 of 11 PASS not_null_fact_sales_product_id .................................... [[32mPASS[0m in 2.77s]
+[0m14:47:29.984191 [debug] [Thread-1  ]: Finished running node test.technical_test.not_null_fact_sales_product_id.39101802a8
+[0m14:47:29.984191 [debug] [Thread-1  ]: Began running node test.technical_test.not_null_stg_orders_order_status.d7fcf15f79
+[0m14:47:29.984191 [info ] [Thread-1  ]: 7 of 11 START test not_null_stg_orders_order_status ............................ [RUN]
+[0m14:47:29.984191 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly test.technical_test.not_null_fact_sales_product_id.39101802a8, now test.technical_test.not_null_stg_orders_order_status.d7fcf15f79)
+[0m14:47:29.984191 [debug] [Thread-1  ]: Began compiling node test.technical_test.not_null_stg_orders_order_status.d7fcf15f79
+[0m14:47:30.015436 [debug] [Thread-1  ]: Writing injected SQL for node "test.technical_test.not_null_stg_orders_order_status.d7fcf15f79"
+[0m14:47:30.015436 [debug] [Thread-1  ]: Timing info for test.technical_test.not_null_stg_orders_order_status.d7fcf15f79 (compile): 14:47:29.999803 => 14:47:30.015436
+[0m14:47:30.015436 [debug] [Thread-1  ]: Began executing node test.technical_test.not_null_stg_orders_order_status.d7fcf15f79
+[0m14:47:30.037411 [debug] [Thread-1  ]: Writing runtime sql for node "test.technical_test.not_null_stg_orders_order_status.d7fcf15f79"
+[0m14:47:30.041415 [debug] [Thread-1  ]: Using snowflake connection "test.technical_test.not_null_stg_orders_order_status.d7fcf15f79"
+[0m14:47:30.043413 [debug] [Thread-1  ]: On test.technical_test.not_null_stg_orders_order_status.d7fcf15f79: /* {"app": "dbt", "dbt_version": "1.6.18", "profile_name": "technical_test", "target_name": "dev", "node_id": "test.technical_test.not_null_stg_orders_order_status.d7fcf15f79"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select order_status
+from TECHNICALTEST.ANALYTICS.stg_orders
+where order_status is null
+
+
+
+      
+    ) dbt_internal_test
+[0m14:47:30.045418 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m14:47:32.406003 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 2.0 seconds
+[0m14:47:32.421630 [debug] [Thread-1  ]: Timing info for test.technical_test.not_null_stg_orders_order_status.d7fcf15f79 (execute): 14:47:30.015436 => 14:47:32.421630
+[0m14:47:32.421630 [debug] [Thread-1  ]: On test.technical_test.not_null_stg_orders_order_status.d7fcf15f79: Close
+[0m14:47:32.796818 [info ] [Thread-1  ]: 7 of 11 PASS not_null_stg_orders_order_status .................................. [[32mPASS[0m in 2.81s]
+[0m14:47:32.796818 [debug] [Thread-1  ]: Finished running node test.technical_test.not_null_stg_orders_order_status.d7fcf15f79
+[0m14:47:32.796818 [debug] [Thread-1  ]: Began running node test.technical_test.relationships_fact_sales_customer_id__customer_id__ref_dim_customers_.540baa6d47
+[0m14:47:32.812449 [info ] [Thread-1  ]: 8 of 11 START test relationships_fact_sales_customer_id__customer_id__ref_dim_customers_  [RUN]
+[0m14:47:32.812449 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly test.technical_test.not_null_stg_orders_order_status.d7fcf15f79, now test.technical_test.relationships_fact_sales_customer_id__customer_id__ref_dim_customers_.540baa6d47)
+[0m14:47:32.812449 [debug] [Thread-1  ]: Began compiling node test.technical_test.relationships_fact_sales_customer_id__customer_id__ref_dim_customers_.540baa6d47
+[0m14:47:32.812449 [debug] [Thread-1  ]: Writing injected SQL for node "test.technical_test.relationships_fact_sales_customer_id__customer_id__ref_dim_customers_.540baa6d47"
+[0m14:47:32.812449 [debug] [Thread-1  ]: Timing info for test.technical_test.relationships_fact_sales_customer_id__customer_id__ref_dim_customers_.540baa6d47 (compile): 14:47:32.812449 => 14:47:32.812449
+[0m14:47:32.828409 [debug] [Thread-1  ]: Began executing node test.technical_test.relationships_fact_sales_customer_id__customer_id__ref_dim_customers_.540baa6d47
+[0m14:47:32.835438 [debug] [Thread-1  ]: Writing runtime sql for node "test.technical_test.relationships_fact_sales_customer_id__customer_id__ref_dim_customers_.540baa6d47"
+[0m14:47:32.839423 [debug] [Thread-1  ]: Using snowflake connection "test.technical_test.relationships_fact_sales_customer_id__customer_id__ref_dim_customers_.540baa6d47"
+[0m14:47:32.840422 [debug] [Thread-1  ]: On test.technical_test.relationships_fact_sales_customer_id__customer_id__ref_dim_customers_.540baa6d47: /* {"app": "dbt", "dbt_version": "1.6.18", "profile_name": "technical_test", "target_name": "dev", "node_id": "test.technical_test.relationships_fact_sales_customer_id__customer_id__ref_dim_customers_.540baa6d47"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with child as (
+    select customer_id as from_field
+    from TECHNICALTEST.ANALYTICS.fact_sales
+    where customer_id is not null
+),
+
+parent as (
+    select customer_id as to_field
+    from TECHNICALTEST.ANALYTICS.dim_customers
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+      
+    ) dbt_internal_test
+[0m14:47:32.842422 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m14:47:36.387281 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 4.0 seconds
+[0m14:47:36.390383 [debug] [Thread-1  ]: Timing info for test.technical_test.relationships_fact_sales_customer_id__customer_id__ref_dim_customers_.540baa6d47 (execute): 14:47:32.830415 => 14:47:36.390383
+[0m14:47:36.390383 [debug] [Thread-1  ]: On test.technical_test.relationships_fact_sales_customer_id__customer_id__ref_dim_customers_.540baa6d47: Close
+[0m14:47:36.797879 [info ] [Thread-1  ]: 8 of 11 PASS relationships_fact_sales_customer_id__customer_id__ref_dim_customers_  [[32mPASS[0m in 3.98s]
+[0m14:47:36.803903 [debug] [Thread-1  ]: Finished running node test.technical_test.relationships_fact_sales_customer_id__customer_id__ref_dim_customers_.540baa6d47
+[0m14:47:36.805904 [debug] [Thread-1  ]: Began running node test.technical_test.relationships_fact_sales_product_id__product_id__ref_dim_products_.c768410e5b
+[0m14:47:36.807906 [info ] [Thread-1  ]: 9 of 11 START test relationships_fact_sales_product_id__product_id__ref_dim_products_  [RUN]
+[0m14:47:36.810892 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly test.technical_test.relationships_fact_sales_customer_id__customer_id__ref_dim_customers_.540baa6d47, now test.technical_test.relationships_fact_sales_product_id__product_id__ref_dim_products_.c768410e5b)
+[0m14:47:36.812909 [debug] [Thread-1  ]: Began compiling node test.technical_test.relationships_fact_sales_product_id__product_id__ref_dim_products_.c768410e5b
+[0m14:47:36.827976 [debug] [Thread-1  ]: Writing injected SQL for node "test.technical_test.relationships_fact_sales_product_id__product_id__ref_dim_products_.c768410e5b"
+[0m14:47:36.827976 [debug] [Thread-1  ]: Timing info for test.technical_test.relationships_fact_sales_product_id__product_id__ref_dim_products_.c768410e5b (compile): 14:47:36.814890 => 14:47:36.827976
+[0m14:47:36.827976 [debug] [Thread-1  ]: Began executing node test.technical_test.relationships_fact_sales_product_id__product_id__ref_dim_products_.c768410e5b
+[0m14:47:36.843605 [debug] [Thread-1  ]: Writing runtime sql for node "test.technical_test.relationships_fact_sales_product_id__product_id__ref_dim_products_.c768410e5b"
+[0m14:47:36.843605 [debug] [Thread-1  ]: Using snowflake connection "test.technical_test.relationships_fact_sales_product_id__product_id__ref_dim_products_.c768410e5b"
+[0m14:47:36.843605 [debug] [Thread-1  ]: On test.technical_test.relationships_fact_sales_product_id__product_id__ref_dim_products_.c768410e5b: /* {"app": "dbt", "dbt_version": "1.6.18", "profile_name": "technical_test", "target_name": "dev", "node_id": "test.technical_test.relationships_fact_sales_product_id__product_id__ref_dim_products_.c768410e5b"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with child as (
+    select product_id as from_field
+    from TECHNICALTEST.ANALYTICS.fact_sales
+    where product_id is not null
+),
+
+parent as (
+    select product_id as to_field
+    from TECHNICALTEST.ANALYTICS.dim_products
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+      
+    ) dbt_internal_test
+[0m14:47:36.843605 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m14:47:39.865026 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 3.0 seconds
+[0m14:47:39.865026 [debug] [Thread-1  ]: Timing info for test.technical_test.relationships_fact_sales_product_id__product_id__ref_dim_products_.c768410e5b (execute): 14:47:36.827976 => 14:47:39.865026
+[0m14:47:39.865026 [debug] [Thread-1  ]: On test.technical_test.relationships_fact_sales_product_id__product_id__ref_dim_products_.c768410e5b: Close
+[0m14:47:40.250674 [info ] [Thread-1  ]: 9 of 11 PASS relationships_fact_sales_product_id__product_id__ref_dim_products_  [[32mPASS[0m in 3.44s]
+[0m14:47:40.266274 [debug] [Thread-1  ]: Finished running node test.technical_test.relationships_fact_sales_product_id__product_id__ref_dim_products_.c768410e5b
+[0m14:47:40.266274 [debug] [Thread-1  ]: Began running node test.technical_test.unique_dim_customers_customer_id.15c9f1e2fd
+[0m14:47:40.266274 [info ] [Thread-1  ]: 10 of 11 START test unique_dim_customers_customer_id ........................... [RUN]
+[0m14:47:40.266274 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly test.technical_test.relationships_fact_sales_product_id__product_id__ref_dim_products_.c768410e5b, now test.technical_test.unique_dim_customers_customer_id.15c9f1e2fd)
+[0m14:47:40.266274 [debug] [Thread-1  ]: Began compiling node test.technical_test.unique_dim_customers_customer_id.15c9f1e2fd
+[0m14:47:40.297528 [debug] [Thread-1  ]: Writing injected SQL for node "test.technical_test.unique_dim_customers_customer_id.15c9f1e2fd"
+[0m14:47:40.297528 [debug] [Thread-1  ]: Timing info for test.technical_test.unique_dim_customers_customer_id.15c9f1e2fd (compile): 14:47:40.266274 => 14:47:40.297528
+[0m14:47:40.297528 [debug] [Thread-1  ]: Began executing node test.technical_test.unique_dim_customers_customer_id.15c9f1e2fd
+[0m14:47:40.297528 [debug] [Thread-1  ]: Writing runtime sql for node "test.technical_test.unique_dim_customers_customer_id.15c9f1e2fd"
+[0m14:47:40.297528 [debug] [Thread-1  ]: Using snowflake connection "test.technical_test.unique_dim_customers_customer_id.15c9f1e2fd"
+[0m14:47:40.297528 [debug] [Thread-1  ]: On test.technical_test.unique_dim_customers_customer_id.15c9f1e2fd: /* {"app": "dbt", "dbt_version": "1.6.18", "profile_name": "technical_test", "target_name": "dev", "node_id": "test.technical_test.unique_dim_customers_customer_id.15c9f1e2fd"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    customer_id as unique_field,
+    count(*) as n_records
+
+from TECHNICALTEST.ANALYTICS.dim_customers
+where customer_id is not null
+group by customer_id
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m14:47:40.314236 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m14:47:42.601679 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 2.0 seconds
+[0m14:47:42.611713 [debug] [Thread-1  ]: Timing info for test.technical_test.unique_dim_customers_customer_id.15c9f1e2fd (execute): 14:47:40.297528 => 14:47:42.610712
+[0m14:47:42.614695 [debug] [Thread-1  ]: On test.technical_test.unique_dim_customers_customer_id.15c9f1e2fd: Close
+[0m14:47:42.671668 [info ] [Thread-1  ]: 10 of 11 PASS unique_dim_customers_customer_id ................................. [[32mPASS[0m in 2.41s]
+[0m14:47:42.671668 [debug] [Thread-1  ]: Finished running node test.technical_test.unique_dim_customers_customer_id.15c9f1e2fd
+[0m14:47:42.671668 [debug] [Thread-1  ]: Began running node test.technical_test.unique_dim_products_product_id.ef7b2a9985
+[0m14:47:42.692461 [info ] [Thread-1  ]: 11 of 11 START test unique_dim_products_product_id ............................. [RUN]
+[0m14:47:42.695449 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly test.technical_test.unique_dim_customers_customer_id.15c9f1e2fd, now test.technical_test.unique_dim_products_product_id.ef7b2a9985)
+[0m14:47:42.697465 [debug] [Thread-1  ]: Began compiling node test.technical_test.unique_dim_products_product_id.ef7b2a9985
+[0m14:47:42.706454 [debug] [Thread-1  ]: Writing injected SQL for node "test.technical_test.unique_dim_products_product_id.ef7b2a9985"
+[0m14:47:42.709458 [debug] [Thread-1  ]: Timing info for test.technical_test.unique_dim_products_product_id.ef7b2a9985 (compile): 14:47:42.698466 => 14:47:42.708455
+[0m14:47:42.711458 [debug] [Thread-1  ]: Began executing node test.technical_test.unique_dim_products_product_id.ef7b2a9985
+[0m14:47:42.719480 [debug] [Thread-1  ]: Writing runtime sql for node "test.technical_test.unique_dim_products_product_id.ef7b2a9985"
+[0m14:47:42.722468 [debug] [Thread-1  ]: Using snowflake connection "test.technical_test.unique_dim_products_product_id.ef7b2a9985"
+[0m14:47:42.724470 [debug] [Thread-1  ]: On test.technical_test.unique_dim_products_product_id.ef7b2a9985: /* {"app": "dbt", "dbt_version": "1.6.18", "profile_name": "technical_test", "target_name": "dev", "node_id": "test.technical_test.unique_dim_products_product_id.ef7b2a9985"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    product_id as unique_field,
+    count(*) as n_records
+
+from TECHNICALTEST.ANALYTICS.dim_products
+where product_id is not null
+group by product_id
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m14:47:42.726469 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m14:47:45.072352 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 2.0 seconds
+[0m14:47:45.072352 [debug] [Thread-1  ]: Timing info for test.technical_test.unique_dim_products_product_id.ef7b2a9985 (execute): 14:47:42.712462 => 14:47:45.072352
+[0m14:47:45.072352 [debug] [Thread-1  ]: On test.technical_test.unique_dim_products_product_id.ef7b2a9985: Close
+[0m14:47:45.134854 [info ] [Thread-1  ]: 11 of 11 PASS unique_dim_products_product_id ................................... [[32mPASS[0m in 2.44s]
+[0m14:47:45.150480 [debug] [Thread-1  ]: Finished running node test.technical_test.unique_dim_products_product_id.ef7b2a9985
+[0m14:47:45.150480 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:47:45.150480 [debug] [MainThread]: Connection 'list_TECHNICALTEST_ANALYTICS' was properly closed.
+[0m14:47:45.150480 [debug] [MainThread]: Connection 'test.technical_test.unique_dim_products_product_id.ef7b2a9985' was properly closed.
+[0m14:47:45.150480 [info ] [MainThread]: 
+[0m14:47:45.150480 [info ] [MainThread]: Finished running 11 tests in 0 hours 0 minutes and 36.39 seconds (36.39s).
+[0m14:47:45.150480 [debug] [MainThread]: Command end result
+[0m14:47:45.166106 [info ] [MainThread]: 
+[0m14:47:45.181897 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m14:47:45.183900 [info ] [MainThread]: 
+[0m14:47:45.184901 [error] [MainThread]: [31mFailure in test accepted_values_stg_orders_order_status__delivered__shipped__canceled__processing__invoiced (models\schema.yml)[0m
+[0m14:47:45.186902 [error] [MainThread]:   Got 3 results, configured to fail if != 0
+[0m14:47:45.187903 [info ] [MainThread]: 
+[0m14:47:45.189905 [info ] [MainThread]:   compiled Code at target\compiled\technical_test\models\schema.yml\accepted_values_stg_orders_bde5ee6fc4d0f6afdbd492f61b728842.sql
+[0m14:47:45.191907 [info ] [MainThread]: 
+[0m14:47:45.192906 [info ] [MainThread]: Done. PASS=10 WARN=0 ERROR=1 SKIP=0 TOTAL=11
+[0m14:47:45.194909 [debug] [MainThread]: Command `dbt test` failed at 14:47:45.194909 after 37.59 seconds
+[0m14:47:45.195909 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000072429BC400>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000007247A752B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000007248451730>]}
+[0m14:47:45.197911 [debug] [MainThread]: Flushing usage events
+[0m14:49:57.360969 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000000F079690220>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000000F07D7ED1C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000000F07D7ED730>]}
+
+
+============================== 14:49:57.360969 | df8bef24-3515-42a8-8146-e13c41b81513 ==============================
+[0m14:49:57.360969 [info ] [MainThread]: Running with dbt=1.6.18
+[0m14:49:57.360969 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': 'C:\\Users\\midnight23owl\\Documents\\technical_test\\logs', 'profiles_dir': 'C:\\Users\\midnight23owl\\.dbt', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt test', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m14:49:58.028211 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'df8bef24-3515-42a8-8146-e13c41b81513', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000000F07D7ED2B0>]}
+[0m14:49:58.047881 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'df8bef24-3515-42a8-8146-e13c41b81513', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000000F07E745340>]}
+[0m14:49:58.047881 [info ] [MainThread]: Registered adapter: snowflake=1.6.0
+[0m14:49:58.063532 [debug] [MainThread]: checksum: 7b9fab86a08e9e96a48a825af743c566d95b877e068b8c6d0dbafbf714447189, vars: {}, profile: , target: , version: 1.6.18
+[0m14:49:58.191590 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m14:49:58.191590 [debug] [MainThread]: Partial parsing: updated file: technical_test://models\schema.yml
+[0m14:49:58.359171 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.technical_test.example
+[0m14:49:58.359171 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'df8bef24-3515-42a8-8146-e13c41b81513', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000000F07F152940>]}
+[0m14:49:58.390422 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'df8bef24-3515-42a8-8146-e13c41b81513', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000000F07E8061C0>]}
+[0m14:49:58.390422 [info ] [MainThread]: Found 6 models, 11 tests, 0 sources, 0 exposures, 0 metrics, 375 macros, 0 groups, 0 semantic models
+[0m14:49:58.390422 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'df8bef24-3515-42a8-8146-e13c41b81513', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000000F07E806130>]}
+[0m14:49:58.390422 [info ] [MainThread]: 
+[0m14:49:58.390422 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m14:49:58.390422 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_TECHNICALTEST_ANALYTICS'
+[0m14:49:58.421695 [debug] [ThreadPool]: Using snowflake connection "list_TECHNICALTEST_ANALYTICS"
+[0m14:49:58.421695 [debug] [ThreadPool]: On list_TECHNICALTEST_ANALYTICS: /* {"app": "dbt", "dbt_version": "1.6.18", "profile_name": "technical_test", "target_name": "dev", "connection_name": "list_TECHNICALTEST_ANALYTICS"} */
+show terse objects in TECHNICALTEST.ANALYTICS limit 10000
+[0m14:49:58.421695 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:50:02.006472 [debug] [ThreadPool]: SQL status: SUCCESS 7 in 4.0 seconds
+[0m14:50:02.015478 [debug] [ThreadPool]: On list_TECHNICALTEST_ANALYTICS: Close
+[0m14:50:02.095615 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'df8bef24-3515-42a8-8146-e13c41b81513', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000000F07E745EE0>]}
+[0m14:50:02.100623 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m14:50:02.104627 [info ] [MainThread]: 
+[0m14:50:02.110624 [debug] [Thread-1  ]: Began running node test.technical_test.accepted_values_stg_orders_order_status__delivered__shipped__canceled__processing__invoiced__unavailable__created__approved.567ad0aec4
+[0m14:50:02.112641 [info ] [Thread-1  ]: 1 of 11 START test accepted_values_stg_orders_order_status__delivered__shipped__canceled__processing__invoiced__unavailable__created__approved  [RUN]
+[0m14:50:02.112720 [debug] [Thread-1  ]: Acquiring new snowflake connection 'test.technical_test.accepted_values_stg_orders_order_status__delivered__shipped__canceled__processing__invoiced__unavailable__created__approved.567ad0aec4'
+[0m14:50:02.112720 [debug] [Thread-1  ]: Began compiling node test.technical_test.accepted_values_stg_orders_order_status__delivered__shipped__canceled__processing__invoiced__unavailable__created__approved.567ad0aec4
+[0m14:50:02.137477 [debug] [Thread-1  ]: Writing injected SQL for node "test.technical_test.accepted_values_stg_orders_order_status__delivered__shipped__canceled__processing__invoiced__unavailable__created__approved.567ad0aec4"
+[0m14:50:02.140530 [debug] [Thread-1  ]: Timing info for test.technical_test.accepted_values_stg_orders_order_status__delivered__shipped__canceled__processing__invoiced__unavailable__created__approved.567ad0aec4 (compile): 14:50:02.112720 => 14:50:02.139482
+[0m14:50:02.140530 [debug] [Thread-1  ]: Began executing node test.technical_test.accepted_values_stg_orders_order_status__delivered__shipped__canceled__processing__invoiced__unavailable__created__approved.567ad0aec4
+[0m14:50:02.171806 [debug] [Thread-1  ]: Writing runtime sql for node "test.technical_test.accepted_values_stg_orders_order_status__delivered__shipped__canceled__processing__invoiced__unavailable__created__approved.567ad0aec4"
+[0m14:50:02.171806 [debug] [Thread-1  ]: Using snowflake connection "test.technical_test.accepted_values_stg_orders_order_status__delivered__shipped__canceled__processing__invoiced__unavailable__created__approved.567ad0aec4"
+[0m14:50:02.171806 [debug] [Thread-1  ]: On test.technical_test.accepted_values_stg_orders_order_status__delivered__shipped__canceled__processing__invoiced__unavailable__created__approved.567ad0aec4: /* {"app": "dbt", "dbt_version": "1.6.18", "profile_name": "technical_test", "target_name": "dev", "node_id": "test.technical_test.accepted_values_stg_orders_order_status__delivered__shipped__canceled__processing__invoiced__unavailable__created__approved.567ad0aec4"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with all_values as (
+
+    select
+        order_status as value_field,
+        count(*) as n_records
+
+    from TECHNICALTEST.ANALYTICS.stg_orders
+    group by order_status
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'delivered','shipped','canceled','processing','invoiced','unavailable','created','approved'
+)
+
+
+
+      
+    ) dbt_internal_test
+[0m14:50:02.171806 [debug] [Thread-1  ]: Opening a new connection, currently in state init
+[0m14:50:05.065229 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 3.0 seconds
+[0m14:50:05.108133 [debug] [Thread-1  ]: Timing info for test.technical_test.accepted_values_stg_orders_order_status__delivered__shipped__canceled__processing__invoiced__unavailable__created__approved.567ad0aec4 (execute): 14:50:02.140530 => 14:50:05.108133
+[0m14:50:05.109195 [debug] [Thread-1  ]: On test.technical_test.accepted_values_stg_orders_order_status__delivered__shipped__canceled__processing__invoiced__unavailable__created__approved.567ad0aec4: Close
+[0m14:50:05.171726 [info ] [Thread-1  ]: 1 of 11 PASS accepted_values_stg_orders_order_status__delivered__shipped__canceled__processing__invoiced__unavailable__created__approved  [[32mPASS[0m in 3.06s]
+[0m14:50:05.171726 [debug] [Thread-1  ]: Finished running node test.technical_test.accepted_values_stg_orders_order_status__delivered__shipped__canceled__processing__invoiced__unavailable__created__approved.567ad0aec4
+[0m14:50:05.171726 [debug] [Thread-1  ]: Began running node test.technical_test.not_null_dim_customers_customer_id.dd91cd1c8d
+[0m14:50:05.189607 [info ] [Thread-1  ]: 2 of 11 START test not_null_dim_customers_customer_id .......................... [RUN]
+[0m14:50:05.194630 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly test.technical_test.accepted_values_stg_orders_order_status__delivered__shipped__canceled__processing__invoiced__unavailable__created__approved.567ad0aec4, now test.technical_test.not_null_dim_customers_customer_id.dd91cd1c8d)
+[0m14:50:05.198606 [debug] [Thread-1  ]: Began compiling node test.technical_test.not_null_dim_customers_customer_id.dd91cd1c8d
+[0m14:50:05.219345 [debug] [Thread-1  ]: Writing injected SQL for node "test.technical_test.not_null_dim_customers_customer_id.dd91cd1c8d"
+[0m14:50:05.219345 [debug] [Thread-1  ]: Timing info for test.technical_test.not_null_dim_customers_customer_id.dd91cd1c8d (compile): 14:50:05.200628 => 14:50:05.219345
+[0m14:50:05.219345 [debug] [Thread-1  ]: Began executing node test.technical_test.not_null_dim_customers_customer_id.dd91cd1c8d
+[0m14:50:05.234970 [debug] [Thread-1  ]: Writing runtime sql for node "test.technical_test.not_null_dim_customers_customer_id.dd91cd1c8d"
+[0m14:50:05.234970 [debug] [Thread-1  ]: Using snowflake connection "test.technical_test.not_null_dim_customers_customer_id.dd91cd1c8d"
+[0m14:50:05.234970 [debug] [Thread-1  ]: On test.technical_test.not_null_dim_customers_customer_id.dd91cd1c8d: /* {"app": "dbt", "dbt_version": "1.6.18", "profile_name": "technical_test", "target_name": "dev", "node_id": "test.technical_test.not_null_dim_customers_customer_id.dd91cd1c8d"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select customer_id
+from TECHNICALTEST.ANALYTICS.dim_customers
+where customer_id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m14:50:05.234970 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m14:50:08.354439 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 3.0 seconds
+[0m14:50:08.365419 [debug] [Thread-1  ]: Timing info for test.technical_test.not_null_dim_customers_customer_id.dd91cd1c8d (execute): 14:50:05.219345 => 14:50:08.363418
+[0m14:50:08.368449 [debug] [Thread-1  ]: On test.technical_test.not_null_dim_customers_customer_id.dd91cd1c8d: Close
+[0m14:50:08.439063 [info ] [Thread-1  ]: 2 of 11 PASS not_null_dim_customers_customer_id ................................ [[32mPASS[0m in 3.25s]
+[0m14:50:08.454662 [debug] [Thread-1  ]: Finished running node test.technical_test.not_null_dim_customers_customer_id.dd91cd1c8d
+[0m14:50:08.454662 [debug] [Thread-1  ]: Began running node test.technical_test.not_null_dim_products_product_id.c8aba288d1
+[0m14:50:08.454662 [info ] [Thread-1  ]: 3 of 11 START test not_null_dim_products_product_id ............................ [RUN]
+[0m14:50:08.454662 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly test.technical_test.not_null_dim_customers_customer_id.dd91cd1c8d, now test.technical_test.not_null_dim_products_product_id.c8aba288d1)
+[0m14:50:08.471585 [debug] [Thread-1  ]: Began compiling node test.technical_test.not_null_dim_products_product_id.c8aba288d1
+[0m14:50:08.484704 [debug] [Thread-1  ]: Writing injected SQL for node "test.technical_test.not_null_dim_products_product_id.c8aba288d1"
+[0m14:50:08.484704 [debug] [Thread-1  ]: Timing info for test.technical_test.not_null_dim_products_product_id.c8aba288d1 (compile): 14:50:08.473607 => 14:50:08.484704
+[0m14:50:08.500341 [debug] [Thread-1  ]: Began executing node test.technical_test.not_null_dim_products_product_id.c8aba288d1
+[0m14:50:08.500341 [debug] [Thread-1  ]: Writing runtime sql for node "test.technical_test.not_null_dim_products_product_id.c8aba288d1"
+[0m14:50:08.515971 [debug] [Thread-1  ]: Using snowflake connection "test.technical_test.not_null_dim_products_product_id.c8aba288d1"
+[0m14:50:08.515971 [debug] [Thread-1  ]: On test.technical_test.not_null_dim_products_product_id.c8aba288d1: /* {"app": "dbt", "dbt_version": "1.6.18", "profile_name": "technical_test", "target_name": "dev", "node_id": "test.technical_test.not_null_dim_products_product_id.c8aba288d1"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select product_id
+from TECHNICALTEST.ANALYTICS.dim_products
+where product_id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m14:50:08.515971 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m14:50:10.875511 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 2.0 seconds
+[0m14:50:10.891149 [debug] [Thread-1  ]: Timing info for test.technical_test.not_null_dim_products_product_id.c8aba288d1 (execute): 14:50:08.500341 => 14:50:10.891149
+[0m14:50:10.891149 [debug] [Thread-1  ]: On test.technical_test.not_null_dim_products_product_id.c8aba288d1: Close
+[0m14:50:10.953656 [info ] [Thread-1  ]: 3 of 11 PASS not_null_dim_products_product_id .................................. [[32mPASS[0m in 2.50s]
+[0m14:50:10.953656 [debug] [Thread-1  ]: Finished running node test.technical_test.not_null_dim_products_product_id.c8aba288d1
+[0m14:50:10.953656 [debug] [Thread-1  ]: Began running node test.technical_test.not_null_fact_sales_customer_id.39febb61fd
+[0m14:50:10.953656 [info ] [Thread-1  ]: 4 of 11 START test not_null_fact_sales_customer_id ............................. [RUN]
+[0m14:50:10.970444 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly test.technical_test.not_null_dim_products_product_id.c8aba288d1, now test.technical_test.not_null_fact_sales_customer_id.39febb61fd)
+[0m14:50:10.972441 [debug] [Thread-1  ]: Began compiling node test.technical_test.not_null_fact_sales_customer_id.39febb61fd
+[0m14:50:10.984550 [debug] [Thread-1  ]: Writing injected SQL for node "test.technical_test.not_null_fact_sales_customer_id.39febb61fd"
+[0m14:50:10.984550 [debug] [Thread-1  ]: Timing info for test.technical_test.not_null_fact_sales_customer_id.39febb61fd (compile): 14:50:10.974442 => 14:50:10.984550
+[0m14:50:10.984550 [debug] [Thread-1  ]: Began executing node test.technical_test.not_null_fact_sales_customer_id.39febb61fd
+[0m14:50:11.000178 [debug] [Thread-1  ]: Writing runtime sql for node "test.technical_test.not_null_fact_sales_customer_id.39febb61fd"
+[0m14:50:11.000178 [debug] [Thread-1  ]: Using snowflake connection "test.technical_test.not_null_fact_sales_customer_id.39febb61fd"
+[0m14:50:11.000178 [debug] [Thread-1  ]: On test.technical_test.not_null_fact_sales_customer_id.39febb61fd: /* {"app": "dbt", "dbt_version": "1.6.18", "profile_name": "technical_test", "target_name": "dev", "node_id": "test.technical_test.not_null_fact_sales_customer_id.39febb61fd"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select customer_id
+from TECHNICALTEST.ANALYTICS.fact_sales
+where customer_id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m14:50:11.000178 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m14:50:13.265299 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 2.0 seconds
+[0m14:50:13.280935 [debug] [Thread-1  ]: Timing info for test.technical_test.not_null_fact_sales_customer_id.39febb61fd (execute): 14:50:10.984550 => 14:50:13.280935
+[0m14:50:13.280935 [debug] [Thread-1  ]: On test.technical_test.not_null_fact_sales_customer_id.39febb61fd: Close
+[0m14:50:13.371051 [info ] [Thread-1  ]: 4 of 11 PASS not_null_fact_sales_customer_id ................................... [[32mPASS[0m in 2.42s]
+[0m14:50:13.375141 [debug] [Thread-1  ]: Finished running node test.technical_test.not_null_fact_sales_customer_id.39febb61fd
+[0m14:50:13.375141 [debug] [Thread-1  ]: Began running node test.technical_test.not_null_fact_sales_order_id.f6f073d70b
+[0m14:50:13.375141 [info ] [Thread-1  ]: 5 of 11 START test not_null_fact_sales_order_id ................................ [RUN]
+[0m14:50:13.375141 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly test.technical_test.not_null_fact_sales_customer_id.39febb61fd, now test.technical_test.not_null_fact_sales_order_id.f6f073d70b)
+[0m14:50:13.390776 [debug] [Thread-1  ]: Began compiling node test.technical_test.not_null_fact_sales_order_id.f6f073d70b
+[0m14:50:13.406421 [debug] [Thread-1  ]: Writing injected SQL for node "test.technical_test.not_null_fact_sales_order_id.f6f073d70b"
+[0m14:50:13.406421 [debug] [Thread-1  ]: Timing info for test.technical_test.not_null_fact_sales_order_id.f6f073d70b (compile): 14:50:13.390776 => 14:50:13.406421
+[0m14:50:13.406421 [debug] [Thread-1  ]: Began executing node test.technical_test.not_null_fact_sales_order_id.f6f073d70b
+[0m14:50:13.406421 [debug] [Thread-1  ]: Writing runtime sql for node "test.technical_test.not_null_fact_sales_order_id.f6f073d70b"
+[0m14:50:13.422020 [debug] [Thread-1  ]: Using snowflake connection "test.technical_test.not_null_fact_sales_order_id.f6f073d70b"
+[0m14:50:13.422020 [debug] [Thread-1  ]: On test.technical_test.not_null_fact_sales_order_id.f6f073d70b: /* {"app": "dbt", "dbt_version": "1.6.18", "profile_name": "technical_test", "target_name": "dev", "node_id": "test.technical_test.not_null_fact_sales_order_id.f6f073d70b"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select order_id
+from TECHNICALTEST.ANALYTICS.fact_sales
+where order_id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m14:50:13.422020 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m14:50:15.757694 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 2.0 seconds
+[0m14:50:15.767722 [debug] [Thread-1  ]: Timing info for test.technical_test.not_null_fact_sales_order_id.f6f073d70b (execute): 14:50:13.406421 => 14:50:15.766721
+[0m14:50:15.770704 [debug] [Thread-1  ]: On test.technical_test.not_null_fact_sales_order_id.f6f073d70b: Close
+[0m14:50:15.834951 [info ] [Thread-1  ]: 5 of 11 PASS not_null_fact_sales_order_id ...................................... [[32mPASS[0m in 2.46s]
+[0m14:50:15.838958 [debug] [Thread-1  ]: Finished running node test.technical_test.not_null_fact_sales_order_id.f6f073d70b
+[0m14:50:15.840956 [debug] [Thread-1  ]: Began running node test.technical_test.not_null_fact_sales_product_id.39101802a8
+[0m14:50:15.842961 [info ] [Thread-1  ]: 6 of 11 START test not_null_fact_sales_product_id .............................. [RUN]
+[0m14:50:15.845979 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly test.technical_test.not_null_fact_sales_order_id.f6f073d70b, now test.technical_test.not_null_fact_sales_product_id.39101802a8)
+[0m14:50:15.847961 [debug] [Thread-1  ]: Began compiling node test.technical_test.not_null_fact_sales_product_id.39101802a8
+[0m14:50:15.859969 [debug] [Thread-1  ]: Writing injected SQL for node "test.technical_test.not_null_fact_sales_product_id.39101802a8"
+[0m14:50:15.863973 [debug] [Thread-1  ]: Timing info for test.technical_test.not_null_fact_sales_product_id.39101802a8 (compile): 14:50:15.848961 => 14:50:15.862973
+[0m14:50:15.865055 [debug] [Thread-1  ]: Began executing node test.technical_test.not_null_fact_sales_product_id.39101802a8
+[0m14:50:15.865055 [debug] [Thread-1  ]: Writing runtime sql for node "test.technical_test.not_null_fact_sales_product_id.39101802a8"
+[0m14:50:15.865055 [debug] [Thread-1  ]: Using snowflake connection "test.technical_test.not_null_fact_sales_product_id.39101802a8"
+[0m14:50:15.865055 [debug] [Thread-1  ]: On test.technical_test.not_null_fact_sales_product_id.39101802a8: /* {"app": "dbt", "dbt_version": "1.6.18", "profile_name": "technical_test", "target_name": "dev", "node_id": "test.technical_test.not_null_fact_sales_product_id.39101802a8"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select product_id
+from TECHNICALTEST.ANALYTICS.fact_sales
+where product_id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m14:50:15.865055 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m14:50:18.296381 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 2.0 seconds
+[0m14:50:18.307385 [debug] [Thread-1  ]: Timing info for test.technical_test.not_null_fact_sales_product_id.39101802a8 (execute): 14:50:15.865055 => 14:50:18.305383
+[0m14:50:18.310392 [debug] [Thread-1  ]: On test.technical_test.not_null_fact_sales_product_id.39101802a8: Close
+[0m14:50:18.386437 [info ] [Thread-1  ]: 6 of 11 PASS not_null_fact_sales_product_id .................................... [[32mPASS[0m in 2.54s]
+[0m14:50:18.389441 [debug] [Thread-1  ]: Finished running node test.technical_test.not_null_fact_sales_product_id.39101802a8
+[0m14:50:18.392442 [debug] [Thread-1  ]: Began running node test.technical_test.not_null_stg_orders_order_status.d7fcf15f79
+[0m14:50:18.393445 [info ] [Thread-1  ]: 7 of 11 START test not_null_stg_orders_order_status ............................ [RUN]
+[0m14:50:18.396445 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly test.technical_test.not_null_fact_sales_product_id.39101802a8, now test.technical_test.not_null_stg_orders_order_status.d7fcf15f79)
+[0m14:50:18.397448 [debug] [Thread-1  ]: Began compiling node test.technical_test.not_null_stg_orders_order_status.d7fcf15f79
+[0m14:50:18.408477 [debug] [Thread-1  ]: Writing injected SQL for node "test.technical_test.not_null_stg_orders_order_status.d7fcf15f79"
+[0m14:50:18.411456 [debug] [Thread-1  ]: Timing info for test.technical_test.not_null_stg_orders_order_status.d7fcf15f79 (compile): 14:50:18.398446 => 14:50:18.410457
+[0m14:50:18.413457 [debug] [Thread-1  ]: Began executing node test.technical_test.not_null_stg_orders_order_status.d7fcf15f79
+[0m14:50:18.421462 [debug] [Thread-1  ]: Writing runtime sql for node "test.technical_test.not_null_stg_orders_order_status.d7fcf15f79"
+[0m14:50:18.424465 [debug] [Thread-1  ]: Using snowflake connection "test.technical_test.not_null_stg_orders_order_status.d7fcf15f79"
+[0m14:50:18.425466 [debug] [Thread-1  ]: On test.technical_test.not_null_stg_orders_order_status.d7fcf15f79: /* {"app": "dbt", "dbt_version": "1.6.18", "profile_name": "technical_test", "target_name": "dev", "node_id": "test.technical_test.not_null_stg_orders_order_status.d7fcf15f79"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select order_status
+from TECHNICALTEST.ANALYTICS.stg_orders
+where order_status is null
+
+
+
+      
+    ) dbt_internal_test
+[0m14:50:18.427468 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m14:50:20.953764 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 3.0 seconds
+[0m14:50:20.969372 [debug] [Thread-1  ]: Timing info for test.technical_test.not_null_stg_orders_order_status.d7fcf15f79 (execute): 14:50:18.414458 => 14:50:20.953764
+[0m14:50:20.969372 [debug] [Thread-1  ]: On test.technical_test.not_null_stg_orders_order_status.d7fcf15f79: Close
+[0m14:50:21.064966 [info ] [Thread-1  ]: 7 of 11 PASS not_null_stg_orders_order_status .................................. [[32mPASS[0m in 2.67s]
+[0m14:50:21.064966 [debug] [Thread-1  ]: Finished running node test.technical_test.not_null_stg_orders_order_status.d7fcf15f79
+[0m14:50:21.080601 [debug] [Thread-1  ]: Began running node test.technical_test.relationships_fact_sales_customer_id__customer_id__ref_dim_customers_.540baa6d47
+[0m14:50:21.080601 [info ] [Thread-1  ]: 8 of 11 START test relationships_fact_sales_customer_id__customer_id__ref_dim_customers_  [RUN]
+[0m14:50:21.080601 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly test.technical_test.not_null_stg_orders_order_status.d7fcf15f79, now test.technical_test.relationships_fact_sales_customer_id__customer_id__ref_dim_customers_.540baa6d47)
+[0m14:50:21.080601 [debug] [Thread-1  ]: Began compiling node test.technical_test.relationships_fact_sales_customer_id__customer_id__ref_dim_customers_.540baa6d47
+[0m14:50:21.114442 [debug] [Thread-1  ]: Writing injected SQL for node "test.technical_test.relationships_fact_sales_customer_id__customer_id__ref_dim_customers_.540baa6d47"
+[0m14:50:21.117441 [debug] [Thread-1  ]: Timing info for test.technical_test.relationships_fact_sales_customer_id__customer_id__ref_dim_customers_.540baa6d47 (compile): 14:50:21.080601 => 14:50:21.116455
+[0m14:50:21.119442 [debug] [Thread-1  ]: Began executing node test.technical_test.relationships_fact_sales_customer_id__customer_id__ref_dim_customers_.540baa6d47
+[0m14:50:21.125445 [debug] [Thread-1  ]: Writing runtime sql for node "test.technical_test.relationships_fact_sales_customer_id__customer_id__ref_dim_customers_.540baa6d47"
+[0m14:50:21.125524 [debug] [Thread-1  ]: Using snowflake connection "test.technical_test.relationships_fact_sales_customer_id__customer_id__ref_dim_customers_.540baa6d47"
+[0m14:50:21.125524 [debug] [Thread-1  ]: On test.technical_test.relationships_fact_sales_customer_id__customer_id__ref_dim_customers_.540baa6d47: /* {"app": "dbt", "dbt_version": "1.6.18", "profile_name": "technical_test", "target_name": "dev", "node_id": "test.technical_test.relationships_fact_sales_customer_id__customer_id__ref_dim_customers_.540baa6d47"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with child as (
+    select customer_id as from_field
+    from TECHNICALTEST.ANALYTICS.fact_sales
+    where customer_id is not null
+),
+
+parent as (
+    select customer_id as to_field
+    from TECHNICALTEST.ANALYTICS.dim_customers
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+      
+    ) dbt_internal_test
+[0m14:50:21.125524 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m14:50:23.562525 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 2.0 seconds
+[0m14:50:23.593751 [debug] [Thread-1  ]: Timing info for test.technical_test.relationships_fact_sales_customer_id__customer_id__ref_dim_customers_.540baa6d47 (execute): 14:50:21.120443 => 14:50:23.593751
+[0m14:50:23.593751 [debug] [Thread-1  ]: On test.technical_test.relationships_fact_sales_customer_id__customer_id__ref_dim_customers_.540baa6d47: Close
+[0m14:50:23.708290 [info ] [Thread-1  ]: 8 of 11 PASS relationships_fact_sales_customer_id__customer_id__ref_dim_customers_  [[32mPASS[0m in 2.63s]
+[0m14:50:23.715296 [debug] [Thread-1  ]: Finished running node test.technical_test.relationships_fact_sales_customer_id__customer_id__ref_dim_customers_.540baa6d47
+[0m14:50:23.718298 [debug] [Thread-1  ]: Began running node test.technical_test.relationships_fact_sales_product_id__product_id__ref_dim_products_.c768410e5b
+[0m14:50:23.722300 [info ] [Thread-1  ]: 9 of 11 START test relationships_fact_sales_product_id__product_id__ref_dim_products_  [RUN]
+[0m14:50:23.726297 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly test.technical_test.relationships_fact_sales_customer_id__customer_id__ref_dim_customers_.540baa6d47, now test.technical_test.relationships_fact_sales_product_id__product_id__ref_dim_products_.c768410e5b)
+[0m14:50:23.729279 [debug] [Thread-1  ]: Began compiling node test.technical_test.relationships_fact_sales_product_id__product_id__ref_dim_products_.c768410e5b
+[0m14:50:23.749313 [debug] [Thread-1  ]: Writing injected SQL for node "test.technical_test.relationships_fact_sales_product_id__product_id__ref_dim_products_.c768410e5b"
+[0m14:50:23.754301 [debug] [Thread-1  ]: Timing info for test.technical_test.relationships_fact_sales_product_id__product_id__ref_dim_products_.c768410e5b (compile): 14:50:23.731280 => 14:50:23.752298
+[0m14:50:23.755297 [debug] [Thread-1  ]: Began executing node test.technical_test.relationships_fact_sales_product_id__product_id__ref_dim_products_.c768410e5b
+[0m14:50:23.762324 [debug] [Thread-1  ]: Writing runtime sql for node "test.technical_test.relationships_fact_sales_product_id__product_id__ref_dim_products_.c768410e5b"
+[0m14:50:23.766328 [debug] [Thread-1  ]: Using snowflake connection "test.technical_test.relationships_fact_sales_product_id__product_id__ref_dim_products_.c768410e5b"
+[0m14:50:23.767304 [debug] [Thread-1  ]: On test.technical_test.relationships_fact_sales_product_id__product_id__ref_dim_products_.c768410e5b: /* {"app": "dbt", "dbt_version": "1.6.18", "profile_name": "technical_test", "target_name": "dev", "node_id": "test.technical_test.relationships_fact_sales_product_id__product_id__ref_dim_products_.c768410e5b"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with child as (
+    select product_id as from_field
+    from TECHNICALTEST.ANALYTICS.fact_sales
+    where product_id is not null
+),
+
+parent as (
+    select product_id as to_field
+    from TECHNICALTEST.ANALYTICS.dim_products
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+      
+    ) dbt_internal_test
+[0m14:50:23.769307 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m14:50:26.281067 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 3.0 seconds
+[0m14:50:26.291054 [debug] [Thread-1  ]: Timing info for test.technical_test.relationships_fact_sales_product_id__product_id__ref_dim_products_.c768410e5b (execute): 14:50:23.756297 => 14:50:26.290053
+[0m14:50:26.295077 [debug] [Thread-1  ]: On test.technical_test.relationships_fact_sales_product_id__product_id__ref_dim_products_.c768410e5b: Close
+[0m14:50:26.421934 [info ] [Thread-1  ]: 9 of 11 PASS relationships_fact_sales_product_id__product_id__ref_dim_products_  [[32mPASS[0m in 2.68s]
+[0m14:50:26.421934 [debug] [Thread-1  ]: Finished running node test.technical_test.relationships_fact_sales_product_id__product_id__ref_dim_products_.c768410e5b
+[0m14:50:26.421934 [debug] [Thread-1  ]: Began running node test.technical_test.unique_dim_customers_customer_id.15c9f1e2fd
+[0m14:50:26.421934 [info ] [Thread-1  ]: 10 of 11 START test unique_dim_customers_customer_id ........................... [RUN]
+[0m14:50:26.437555 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly test.technical_test.relationships_fact_sales_product_id__product_id__ref_dim_products_.c768410e5b, now test.technical_test.unique_dim_customers_customer_id.15c9f1e2fd)
+[0m14:50:26.437555 [debug] [Thread-1  ]: Began compiling node test.technical_test.unique_dim_customers_customer_id.15c9f1e2fd
+[0m14:50:26.453155 [debug] [Thread-1  ]: Writing injected SQL for node "test.technical_test.unique_dim_customers_customer_id.15c9f1e2fd"
+[0m14:50:26.453155 [debug] [Thread-1  ]: Timing info for test.technical_test.unique_dim_customers_customer_id.15c9f1e2fd (compile): 14:50:26.437555 => 14:50:26.453155
+[0m14:50:26.453155 [debug] [Thread-1  ]: Began executing node test.technical_test.unique_dim_customers_customer_id.15c9f1e2fd
+[0m14:50:26.468781 [debug] [Thread-1  ]: Writing runtime sql for node "test.technical_test.unique_dim_customers_customer_id.15c9f1e2fd"
+[0m14:50:26.468781 [debug] [Thread-1  ]: Using snowflake connection "test.technical_test.unique_dim_customers_customer_id.15c9f1e2fd"
+[0m14:50:26.468781 [debug] [Thread-1  ]: On test.technical_test.unique_dim_customers_customer_id.15c9f1e2fd: /* {"app": "dbt", "dbt_version": "1.6.18", "profile_name": "technical_test", "target_name": "dev", "node_id": "test.technical_test.unique_dim_customers_customer_id.15c9f1e2fd"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    customer_id as unique_field,
+    count(*) as n_records
+
+from TECHNICALTEST.ANALYTICS.dim_customers
+where customer_id is not null
+group by customer_id
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m14:50:26.468781 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m14:50:28.828864 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 2.0 seconds
+[0m14:50:28.838850 [debug] [Thread-1  ]: Timing info for test.technical_test.unique_dim_customers_customer_id.15c9f1e2fd (execute): 14:50:26.453155 => 14:50:28.837849
+[0m14:50:28.842874 [debug] [Thread-1  ]: On test.technical_test.unique_dim_customers_customer_id.15c9f1e2fd: Close
+[0m14:50:28.938091 [info ] [Thread-1  ]: 10 of 11 PASS unique_dim_customers_customer_id ................................. [[32mPASS[0m in 2.50s]
+[0m14:50:28.938091 [debug] [Thread-1  ]: Finished running node test.technical_test.unique_dim_customers_customer_id.15c9f1e2fd
+[0m14:50:28.953927 [debug] [Thread-1  ]: Began running node test.technical_test.unique_dim_products_product_id.ef7b2a9985
+[0m14:50:28.955931 [info ] [Thread-1  ]: 11 of 11 START test unique_dim_products_product_id ............................. [RUN]
+[0m14:50:28.959937 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly test.technical_test.unique_dim_customers_customer_id.15c9f1e2fd, now test.technical_test.unique_dim_products_product_id.ef7b2a9985)
+[0m14:50:28.961953 [debug] [Thread-1  ]: Began compiling node test.technical_test.unique_dim_products_product_id.ef7b2a9985
+[0m14:50:28.969030 [debug] [Thread-1  ]: Writing injected SQL for node "test.technical_test.unique_dim_products_product_id.ef7b2a9985"
+[0m14:50:28.969030 [debug] [Thread-1  ]: Timing info for test.technical_test.unique_dim_products_product_id.ef7b2a9985 (compile): 14:50:28.962944 => 14:50:28.969030
+[0m14:50:28.969030 [debug] [Thread-1  ]: Began executing node test.technical_test.unique_dim_products_product_id.ef7b2a9985
+[0m14:50:28.984662 [debug] [Thread-1  ]: Writing runtime sql for node "test.technical_test.unique_dim_products_product_id.ef7b2a9985"
+[0m14:50:28.984662 [debug] [Thread-1  ]: Using snowflake connection "test.technical_test.unique_dim_products_product_id.ef7b2a9985"
+[0m14:50:28.984662 [debug] [Thread-1  ]: On test.technical_test.unique_dim_products_product_id.ef7b2a9985: /* {"app": "dbt", "dbt_version": "1.6.18", "profile_name": "technical_test", "target_name": "dev", "node_id": "test.technical_test.unique_dim_products_product_id.ef7b2a9985"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    product_id as unique_field,
+    count(*) as n_records
+
+from TECHNICALTEST.ANALYTICS.dim_products
+where product_id is not null
+group by product_id
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m14:50:29.000287 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m14:50:31.485122 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 2.0 seconds
+[0m14:50:31.500751 [debug] [Thread-1  ]: Timing info for test.technical_test.unique_dim_products_product_id.ef7b2a9985 (execute): 14:50:28.969030 => 14:50:31.500751
+[0m14:50:31.500751 [debug] [Thread-1  ]: On test.technical_test.unique_dim_products_product_id.ef7b2a9985: Close
+[0m14:50:32.084036 [info ] [Thread-1  ]: 11 of 11 PASS unique_dim_products_product_id ................................... [[32mPASS[0m in 3.12s]
+[0m14:50:32.090041 [debug] [Thread-1  ]: Finished running node test.technical_test.unique_dim_products_product_id.ef7b2a9985
+[0m14:50:32.096016 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:50:32.098019 [debug] [MainThread]: Connection 'list_TECHNICALTEST_ANALYTICS' was properly closed.
+[0m14:50:32.099038 [debug] [MainThread]: Connection 'test.technical_test.unique_dim_products_product_id.ef7b2a9985' was properly closed.
+[0m14:50:32.101020 [info ] [MainThread]: 
+[0m14:50:32.103022 [info ] [MainThread]: Finished running 11 tests in 0 hours 0 minutes and 33.71 seconds (33.71s).
+[0m14:50:32.111046 [debug] [MainThread]: Command end result
+[0m14:50:32.133153 [info ] [MainThread]: 
+[0m14:50:32.135156 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m14:50:32.138160 [info ] [MainThread]: 
+[0m14:50:32.140174 [info ] [MainThread]: Done. PASS=11 WARN=0 ERROR=0 SKIP=0 TOTAL=11
+[0m14:50:32.141254 [debug] [MainThread]: Command `dbt test` succeeded at 14:50:32.141254 after 34.80 seconds
+[0m14:50:32.141254 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000000F079690220>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000000F07F193E20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000000F07F193C10>]}
+[0m14:50:32.141254 [debug] [MainThread]: Flushing usage events

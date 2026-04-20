@@ -1,0 +1,81 @@
+version: 2
+
+models:
+  - name: dim_customers
+    description: "Dimension table containing customer information"
+    columns:
+      - name: customer_id
+        description: "Unique identifier for each customer"
+        tests:
+          - not_null
+          - unique
+
+      - name: customer_city
+        description: "City of the customer"
+
+      - name: customer_state
+        description: "State of the customer"
+
+  - name: dim_products
+    description: "Dimension table containing product information"
+    columns:
+      - name: product_id
+        description: "Unique identifier for each product"
+        tests:
+          - not_null
+          - unique
+
+      - name: product_category_name
+        description: "Category name of the product"
+
+  - name: dim_date
+    description: "Date dimension table"
+    columns:
+      - name: date_key
+        description: "Primary key representing date"
+        tests:
+          - not_null
+          - unique
+
+  - name: fact_sales
+    description: "Fact table containing sales transactions"
+    columns:
+      - name: order_id
+        description: "Order identifier"
+        tests:
+          - not_null
+
+      - name: order_item_id
+        description: "Order item identifier"
+
+      - name: customer_id
+        description: "Reference to customer"
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_customers')
+              field: customer_id
+
+      - name: product_id
+        description: "Reference to product"
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_products')
+              field: product_id
+
+      - name: date_key
+        description: "Reference to date dimension"
+
+      - name: total_amount
+        description: "Total sales amount (price + freight)"
+
+  - name: stg_orders
+    description: "Staging orders data"
+    columns:
+    - name: order_status
+      description: "Status of the order"
+      tests:
+        - not_null
+        - accepted_values:
+            values: ['delivered', 'shipped', 'canceled', 'processing', 'invoiced', 'unavailable', 'created', 'approved']

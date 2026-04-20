@@ -1,0 +1,23 @@
+
+  
+    
+
+        create or replace transient table TECHNICALTEST.ANALYTICS.fact_sales
+         as
+        (
+
+SELECT
+    oi.ORDER_ID,
+    oi.ORDER_ITEM_ID,
+    o.CUSTOMER_ID,
+    oi.PRODUCT_ID,
+    DATE(o.ORDER_PURCHASE_TIMESTAMP) AS DATE_KEY,
+    oi.PRICE,
+    oi.FREIGHT_VALUE,
+    (oi.PRICE + oi.FREIGHT_VALUE) AS TOTAL_AMOUNT
+FROM TECHNICALTEST.PUBLIC.RAW_ORDER_ITEMS oi
+JOIN TECHNICALTEST.ANALYTICS.stg_orders o
+    ON oi.ORDER_ID = o.ORDER_ID
+        );
+      
+  

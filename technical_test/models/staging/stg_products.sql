@@ -1,0 +1,6 @@
+{{ config(materialized='view') }}
+
+SELECT
+    PRODUCT_ID,
+    PRODUCT_CATEGORY_NAME
+FROM TECHNICALTEST.PUBLIC.RAW_PRODUCTS

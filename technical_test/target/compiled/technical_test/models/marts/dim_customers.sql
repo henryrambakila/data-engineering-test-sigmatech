@@ -1,0 +1,4 @@
+
+
+SELECT *
+FROM TECHNICALTEST.ANALYTICS.stg_customers
